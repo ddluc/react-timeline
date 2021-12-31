@@ -10,8 +10,9 @@ export const theme: Theme = {
   },
   palette: {
     common: {
-      black: '#5F646A',
+      black: '#000000',
       white: '#FFFFFF', 
+      charcoal: '#5F646A',
       grey: '#E6E6E6'
     },
     primary: {

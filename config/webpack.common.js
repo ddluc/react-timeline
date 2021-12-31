@@ -23,13 +23,20 @@ module.exports = {
         }
       },
       {
-        test: /\.(svg|png|jpeg|gif|ttf)$/i,
+        test: /\.ttf$/,
         use: [
           {
             loader: 'url-loader',
-            options: {
-              limit: false
-            },
+            options: { limit: false },
+          },
+        ],
+      },
+      {
+        test: /\.svg/,
+        use: [
+          {
+            loader: 'svg-url-loader',
+            options: {  iesafe: true },
           },
         ],
       },
