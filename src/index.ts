@@ -8,5 +8,4 @@ if (process.env.NODE_ENV === 'development') {
   Package.render(); 
 }
 
-
 export default Package.ReactTimeline; 
