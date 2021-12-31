@@ -14,6 +14,16 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
+        test: /\.m?jsx?$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env', "@babel/preset-react"]
+          }
+        }
+      },
+      {
         test: /\.(svg|png|jpeg|gif|ttf)$/i,
         use: [
           {

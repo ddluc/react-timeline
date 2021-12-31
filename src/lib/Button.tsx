@@ -1,8 +1,9 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { Theme } from 'styled-components';
+
 
 const StyledButton = styled.button`
-  background-color: red; 
+  font-family: ${ ({ theme }: { theme: Theme }) => theme.fonts.mono.regular }; 
 `; 
 
 interface ButtonProps {
@@ -38,14 +39,8 @@ export const Button = ({
   label,
   ...props
 }: ButtonProps) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
   return (
-    <StyledButton
-      type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-      style={{ backgroundColor }}
-      {...props}
-    >
+    <StyledButton type="button">
       {label}
     </StyledButton>
   );

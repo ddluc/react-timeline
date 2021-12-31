@@ -1,14 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { ThemeProvider } from "styled-components";
 
 import GlobalFonts from '../theme/fonts';
+import { theme } from '../theme/default';
 
-const ReactTimeline = (): JSX.Element => (
-  <>
-    <GlobalFonts />
-    <div>React Timeline</div>
-  </>
-); 
+import { Button } from '../lib/Button'; 
+import { logBuild } from './util';
+
+
+const ReactTimeline = (): JSX.Element => {
+
+  React.useEffect((() => {
+    logBuild(); 
+  }), []); 
+
+  return (
+    <ThemeProvider theme={theme}>
+      <GlobalFonts />
+      <div>React Timeline</div>
+      <Button label='Test' />
+    </ThemeProvider>
+  ); 
+  
+}
+
 
 // Expose a render method for development
 export const render = (): void => { 
