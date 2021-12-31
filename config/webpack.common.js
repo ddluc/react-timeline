@@ -23,7 +23,10 @@ module.exports = {
     path: path.resolve(__dirname, '../dist'),
   },
   plugins: [
-    new CleanWebpackPlugin(),
+    new CleanWebpackPlugin({
+      protectWebpackAssets: false,
+      cleanAfterEveryBuildPatterns: ['*.LICENSE.txt'],
+    }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "../src/index.html")
     })
