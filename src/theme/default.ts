@@ -4,12 +4,9 @@ import { Theme } from 'styled-components'
 export const theme: Theme = {
   borderRadius: '4px',
   fonts: { 
-    mono: { 
-      regular: 'IBM Plex Mono'
-    }, 
-    sans: { 
-      regular: 'IBM Plex Sans'
-    }
+    mono: 'IBM Plex Mono',
+    sans:'IBM Plex Sans',
+    serif: 'serif'
   },
   palette: {
     common: {

@@ -5,21 +5,14 @@ interface Palette {
   main: string;
   contrastText: string;
 }
-
-interface FontFamily { 
-  regular: string; 
-  light?: string;
-  bold?: string;
-  italic?: string;
-}
-
 declare module 'styled-components' {
 
   export interface Theme {
     borderRadius: string;
     fonts: {
-      mono: FontFamily;
-      sans: FontFamily;
+      mono: string;
+      sans: string;
+      serif: string; 
     };
     palette: {
       common: {

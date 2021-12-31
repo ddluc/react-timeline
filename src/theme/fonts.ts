@@ -5,7 +5,7 @@ import IBMPlexMono__Bold from '../assets/fonts/ibm-plex-mono/IBMPlexMono-Bold.tt
 import IBMPlexMono__BoldItalic from '../assets/fonts/ibm-plex-mono/IBMPlexMono-BoldItalic.ttf';
 import IBMPlexMono__Italic from '../assets/fonts/ibm-plex-mono/IBMPlexMono-Italic.ttf';
 
-import IBMPlexSans__Regular from '../assets/fonts/ibm-plex-sans/IBMPLexSans-Regular.ttf';
+import IBMPlexSans__Regular from '../assets/fonts/ibm-plex-sans/IBMPlexSans-Regular.ttf';
 import IBMPlexSans__Bold from '../assets/fonts/ibm-plex-sans/IBMPlexSans-Bold.ttf';
 import IBMPlexSans__Italic from '../assets/fonts/ibm-plex-sans/IBMPlexSans-Italic.ttf';
 
