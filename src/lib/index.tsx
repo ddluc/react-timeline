@@ -5,7 +5,7 @@ import { ThemeProvider } from "styled-components";
 import GlobalFonts from '../theme/fonts';
 import { theme } from '../theme/default';
 
-import { Button } from '../lib/Button'; 
+import { Button } from './components/Button'; 
 import { logBuild } from './util';
 
 

@@ -2,33 +2,34 @@
 import 'styled-components';
 
 interface Palette {
-  main: string
-  contrastText: string
+  main: string;
+  contrastText: string;
 }
 
 interface FontFamily { 
-  regular: string, 
-  light?: string,
-  bold?: string, 
-  italic?: string
+  regular: string; 
+  light?: string;
+  bold?: string;
+  italic?: string;
 }
 
 declare module 'styled-components' {
 
   export interface Theme {
-    borderRadius: string
+    borderRadius: string;
     fonts: {
-      mono: FontFamily, 
-      sans: FontFamily
-    }
+      mono: FontFamily;
+      sans: FontFamily;
+    };
     palette: {
       common: {
-        black: string
-        white: string
-      }
-      primary: Palette
-      secondary: Palette
-   }
+        black: string;
+        white: string;
+        grey: string;
+      };
+      primary: Palette;
+      secondary: Palette;
+   };
   }
 
 }

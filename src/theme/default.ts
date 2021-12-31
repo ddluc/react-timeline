@@ -13,16 +13,17 @@ export const theme: Theme = {
   },
   palette: {
     common: {
-      black: '#222831',
-      white: '#ffffff'
+      black: '#5F646A',
+      white: '#FFFFFF', 
+      grey: '#E6E6E6'
     },
     primary: {
-      main: '#726a95',
-      contrastText: '#ffffff'
+      main: '#A3ACB9',
+      contrastText: '#FFFFFF'
     },
     secondary: {
-      main: '#709fb0',
-      contrastText: '#ffffff'
+      main: '#69B56A', 
+      contrastText: '#FFFFFF'
     }
   }
 }
