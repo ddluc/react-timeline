@@ -13,6 +13,17 @@ module.exports = {
         use: 'ts-loader',
         exclude: /node_modules/,
       },
+      {
+        test: /\.(svg|png|jpeg|gif|ttf)$/i,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: false
+            },
+          },
+        ],
+      },
     ],
   },
   resolve: {

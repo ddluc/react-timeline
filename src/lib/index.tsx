@@ -1,8 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import GlobalFonts from '../theme/fonts';
+
 const ReactTimeline = (): JSX.Element => (
-  <div>React Timeline</div>
+  <>
+    <GlobalFonts />
+    <div>React Timeline</div>
+  </>
 ); 
 
 // Expose a render method for development
