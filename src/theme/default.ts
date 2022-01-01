@@ -2,6 +2,7 @@
 import { Theme } from 'styled-components'
 
 export const theme: Theme = {
+  id: '__default', 
   borderRadius: '4px',
   fonts: { 
     mono: 'IBM Plex Mono',

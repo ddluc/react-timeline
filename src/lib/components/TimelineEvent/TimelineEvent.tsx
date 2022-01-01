@@ -4,28 +4,39 @@ import { EventContainer } from './TimelineEventContainer';
 import { Card, CardTitle, CardDescription, CardDate } from '../Card'; 
 
 export interface Props { 
+  id: string,
   title: string; 
   date: Date,
   description?: string; 
   active?: Boolean,
   color?: string, 
   backgroundColor?: string, 
-  onHover?: () => void,
-  onClick?: () => void
+  onClick?: (id: string, ) => void
+  onMouseEnter?: (id: string) => void,
+  onMouseLeave?: (id: string) => void,
 }; 
 
 const TimelineEvent = ({ 
+  id,
   title, 
   date, 
   description = '', 
   active = false, 
   color, 
   backgroundColor,
-  onHover, 
-  onClick
-}: Props) => (
+  onClick, 
+  onMouseEnter, 
+  onMouseLeave,
+}: Props): JSX.Element => (
   <EventContainer icon={TimelinePoint}>
-    <Card color={color} backgroundColor={backgroundColor} active={active}>
+    <Card 
+      color={color} 
+      backgroundColor={backgroundColor} 
+      active={active}
+      onClick={() => onClick(id)}
+      onMouseEnter={() => onMouseEnter(id)}
+      onMouseLeave={() => onMouseLeave(id)}
+    >
       <CardTitle>
         <h3>{title}</h3>
       </CardTitle>

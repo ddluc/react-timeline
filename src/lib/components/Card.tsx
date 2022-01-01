@@ -10,11 +10,12 @@ export interface ThemedCardProps extends CardProps {
   theme: Theme;
 }
 
-export const Card = styled.div<CardProps>`
+export const Card = styled.button<CardProps>`
   padding: 10px; 
   width: 430px; 
   min-height: 120px; 
   display: flex; 
+  cursor: pointer; 
   flex-direction: column; 
   justify-content: space-between;
   background-color: ${ ({ theme, backgroundColor }: ThemedCardProps ) => backgroundColor || theme.palette.common.white}; 
@@ -43,6 +44,7 @@ export const CardDescription = styled.div`
   > p {
     font-family: ${ ({ theme }: ThemedCardProps ) => theme.fonts.mono };
     color: ${ ( { theme }: ThemedCardProps ) => theme.palette.common.charcoal };
+    text-align: left; 
     font-size: 12px; 
     font-weight: normal; 
   }

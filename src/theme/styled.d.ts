@@ -8,6 +8,7 @@ interface Palette {
 declare module 'styled-components' {
 
   export interface Theme {
+    id?: '__default' | undefined, 
     borderRadius: string;
     fonts: {
       mono: string;

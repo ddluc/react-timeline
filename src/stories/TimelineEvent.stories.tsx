@@ -12,6 +12,7 @@ export default {
     date: { control: 'date' }
   },
   args: { 
+    id: "1",
     title: "A new timeline event", 
     description: "Cras tristique sodales auctor. Pellentesque vitae nulla eget nulla hendrerit tempus. In sed maximus risus. In vulputate scelerisque venenatis…", 
     date: new Date(), 

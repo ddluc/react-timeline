@@ -1,16 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { ThemeProvider } from "styled-components";
+import { ThemeProvider, Theme } from "styled-components";
 
 import GlobalFonts from '../theme/fonts';
-import { theme } from '../theme/default';
+import { theme as DEFAULT_THEME } from '../theme/default';
 
-import { Button } from './components/Button'; 
-import { TimelineEvent } from './components/TimelineEvent';
 import { logBuild } from './util';
 
+import { Timeline } from './components/Timeline';
+import { ITimelineEvent } from './types';
 
-const ReactTimeline = (): JSX.Element => {
+import { events as MOCK_EVENTS } from './mocks';
+
+
+export interface Props {
+  events: ITimelineEvent[];
+  theme: Theme
+}
+
+const ReactTimeline = ({ events, theme }: Props): JSX.Element => {
 
   React.useEffect((() => {
     logBuild(); 
@@ -18,39 +26,17 @@ const ReactTimeline = (): JSX.Element => {
 
   return (
     <ThemeProvider theme={theme}>
-      <GlobalFonts />
-      <div>React Timeline</div>
-      <Button>Test</Button>
-      <TimelineEvent
-        title="The Event"
-        date={new Date()}
-        description='Cras tristique sodales auctor. Pellentesque vitae nulla eget nulla hendrerit tempus. In sed maximus risus. In vulputate scelerisque venenatis…'
-      />
-      <TimelineEvent
-        title="The Event"
-        date={new Date()}
-        description='Cras tristique sodales auctor. Pellentesque vitae nulla eget nulla hendrerit tempus. In sed maximus risus. In vulputate scelerisque venenatis…'
-      />
-      <TimelineEvent
-        title="The Event"
-        date={new Date()}
-        description='Cras tristique sodales auctor. Pellentesque vitae nulla eget nulla hendrerit tempus. In sed maximus risus. In vulputate scelerisque venenatis…'
-      />
-      <TimelineEvent
-        title="The Event"
-        date={new Date()}
-        description='Cras tristique sodales auctor. Pellentesque vitae nulla eget nulla hendrerit tempus. In sed maximus risus. In vulputate scelerisque venenatis…'
+      { theme.id === '__default' && <GlobalFonts /> }
+      <Timeline events={events}
       />
     </ThemeProvider>
   ); 
   
 }
 
-
 // Expose a render method for development
 export const render = (): void => { 
-  ReactDOM.render(<ReactTimeline />, document.getElementById('root'));
+  ReactDOM.render(<ReactTimeline events={MOCK_EVENTS} theme={DEFAULT_THEME}/>, document.getElementById('root'));
 }
 
 export default { ReactTimeline, render }; 
-
