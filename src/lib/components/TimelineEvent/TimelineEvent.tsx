@@ -1,8 +1,18 @@
 import React from 'react'; 
 import TimelinePoint from '../../../assets/svg/timeline-point.svg';
-import { Props } from './types';
+import { EventContainer } from './TimelineEventContainer';
+import { Card, CardTitle, CardDescription, CardDate } from '../Card'; 
 
-import { EventContainer, Card, Title, Description, Date } from './styles'; 
+export interface Props { 
+  title: string; 
+  date: Date,
+  description?: string; 
+  active?: Boolean,
+  color?: string, 
+  backgroundColor?: string, 
+  onHover?: () => void,
+  onClick?: () => void
+}; 
 
 const TimelineEvent = ({ 
   title, 
@@ -16,17 +26,17 @@ const TimelineEvent = ({
 }: Props) => (
   <EventContainer icon={TimelinePoint}>
     <Card color={color} backgroundColor={backgroundColor} active={active}>
-      <Title>
+      <CardTitle>
         <h3>{title}</h3>
-      </Title>
-      <Description>
+      </CardTitle>
+      <CardDescription>
         <p>{description}</p>
-      </Description>
-      <Date>
+      </CardDescription>
+      <CardDate>
         <span>
           {date.toLocaleDateString()} {date.toLocaleTimeString()}
         </span>
-      </Date>
+      </CardDate>
     </Card>
   </EventContainer>
 ); 

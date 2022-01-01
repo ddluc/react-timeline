@@ -2,4 +2,4 @@
 export { default as TimelineEvent } from './TimelineEvent'; 
 
 // Export prop types
-export type { Props } from './types';
+export type { Props } from './TimelineEvent';

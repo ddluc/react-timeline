@@ -10,12 +10,14 @@ export default {
     backgroundColor: { control: 'color' },
   },
   args: { 
-    label: 'A Button',
-    size: 'medium'
+    size: 'medium',
+    label: 'A Button'
   } as ButtonProps
 } as ComponentMeta<typeof Button>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof Button> = (args: ButtonProps) => <Button {...args} />;
+const Template: ComponentStory<typeof Button> = (args: ButtonProps) => (
+  <Button {...args} >{args.label}</Button>
+);
 
 export const Primary = Template.bind({});

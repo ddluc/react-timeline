@@ -1,47 +1,12 @@
-import { Props } from './types';
 import styled, { Theme } from 'styled-components';
 
-interface EventContainerProps { 
-  icon: string
-}
+export interface CardProps { 
+  active?: Boolean; 
+  backgroundColor: string; 
+  color?: string;
+}; 
 
-interface ThemedEventContainerProps extends EventContainerProps {
-  theme: Theme;
-}
-
-export const EventContainer = styled.div<EventContainerProps>`
-  &:before { 
-    content: '';
-    background: url("${ ({ icon }: ThemedEventContainerProps) => icon }"); 
-    background-repeat: no-repeat;
-    background-position: center; 
-    background-size: cover; 
-    height: 14px; 
-    width: 14px; 
-    position: absolute; 
-    top: -6px; 
-    left: -6px; 
-
-  }; 
-  &:after {
-    content: '';
-    position: absolute; 
-    height: 100%; 
-    width: 1px;
-    top: 10px; 
-    left: 0px;  
-    border-left: solid 1px; 
-    border-color: ${ ({ theme }: ThemedEventContainerProps ) => theme.palette.primary.main };
-  }
-  position: relative;
-  padding-left: 20px;
-  margin: 30px 0px;  
-`; 
-
-
-type CardProps = Pick<Props, 'active' | 'color' | 'backgroundColor' >; 
-
-interface ThemedCardProps extends CardProps {
+export interface ThemedCardProps extends CardProps {
   theme: Theme;
 }
 
@@ -58,12 +23,13 @@ export const Card = styled.div<CardProps>`
     (active ? color || theme.palette.secondary.main : theme.palette.common.grey ) 
   };
   border-radius: ${ ({ theme }: ThemedCardProps ) => theme.borderRadius };
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
   box-shadow: ${ ({ theme, active }: ThemedCardProps ) => 
-    (active ? 'rgba(0, 0, 0, 0.5) 0px 2px 4px 0px' : 'none' )
+    (active ? '2px 2px 4px 0px rgba(0,0,0, 0.2) ' : 'none' )
   };
 `; 
 
-export const Title = styled.div`
+export const CardTitle = styled.div`
   > h3 {
     font-family: ${ ({ theme }: ThemedCardProps ) => theme.fonts.mono };
     color: ${ ( { theme }: ThemedCardProps ) => theme.palette.common.charcoal };
@@ -73,7 +39,7 @@ export const Title = styled.div`
   }
 `; 
 
-export const Description = styled.div`
+export const CardDescription = styled.div`
   > p {
     font-family: ${ ({ theme }: ThemedCardProps ) => theme.fonts.mono };
     color: ${ ( { theme }: ThemedCardProps ) => theme.palette.common.charcoal };
@@ -82,7 +48,7 @@ export const Description = styled.div`
   }
 `; 
 
-export const Date = styled.div`
+export const CardDate = styled.div`
   > span {
     font-family: ${ ({ theme }: ThemedCardProps ) => theme.fonts.mono };
     color: ${ ( { theme }: ThemedCardProps ) => theme.palette.common.charcoal };

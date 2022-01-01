@@ -1,5 +1,14 @@
-import { Props, ButtonSize } from './types';
 import styled, { Theme } from 'styled-components';
+
+export type ButtonSize = 'small' | 'medium' | 'large';
+
+export interface Props {
+  label: string;
+  backgroundColor?: string;
+  color?: string; 
+  size?: ButtonSize; 
+  onClick?: () => void;
+}
 
 type StyledProps = Pick<Props, 'size' | 'backgroundColor' | 'color'>; 
 

@@ -20,7 +20,7 @@ const ReactTimeline = (): JSX.Element => {
     <ThemeProvider theme={theme}>
       <GlobalFonts />
       <div>React Timeline</div>
-      <Button label='Test' />
+      <Button>Test</Button>
       <TimelineEvent
         title="The Event"
         date={new Date()}
