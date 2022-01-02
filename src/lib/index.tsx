@@ -15,10 +15,12 @@ import { events as MOCK_EVENTS } from './mocks';
 
 export interface Props {
   events: ITimelineEvent[];
-  theme: Theme
+  showHeader?: boolean; 
+  title?: string; 
+  theme: Theme; 
 }
 
-const ReactTimeline = ({ events, theme }: Props): JSX.Element => {
+const ReactTimeline = ({ events, showHeader, title, theme }: Props): JSX.Element => {
 
   React.useEffect((() => {
     logBuild(); 
@@ -27,8 +29,7 @@ const ReactTimeline = ({ events, theme }: Props): JSX.Element => {
   return (
     <ThemeProvider theme={theme}>
       { theme.id === '__default' && <GlobalFonts /> }
-      <Timeline events={events}
-      />
+      <Timeline showHeader={showHeader} title={title} events={events} />
     </ThemeProvider>
   ); 
   

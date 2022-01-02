@@ -1,11 +1,15 @@
 import React from 'react';
-import { TimelineContainer } from './TimelineContainer';
+import { Container } from './Container';
 import { TimelineEvent } from "../TimelineEvent";
+import { TimelineHeader } from '../TimelineHeader';
+
 import { ITimelineEvent } from "../../types";
 
 export interface Props { 
   events: ITimelineEvent[]
   activeEventId?: string; 
+  showHeader?: boolean; 
+  title?: string; 
   onClick?: (id: string) => void; 
   onMouseEnter?: (id: string) => void,
   onMouseLeave?: (id: string) => void,
@@ -14,6 +18,8 @@ export interface Props {
 const Timeline = ({ 
   events, 
   activeEventId, 
+  showHeader = true, 
+  title = 'React Timeline',
   onClick, 
   onMouseEnter, 
   onMouseLeave
@@ -48,7 +54,8 @@ const Timeline = ({
   }
 
   return (
-    <TimelineContainer>
+    <Container>
+      { showHeader && <TimelineHeader title={title} />}
       { 
         events.map((event, index) => (
           <TimelineEvent 
@@ -63,7 +70,7 @@ const Timeline = ({
           />
         )) 
       }
-    </TimelineContainer>
+    </Container>
   ); 
 
 }; 

@@ -1,6 +1,6 @@
 import React from 'react'; 
 import TimelinePoint from '../../../assets/svg/timeline-point.svg';
-import { EventContainer } from './TimelineEventContainer';
+import { Container } from './Container';
 import { Card, CardTitle, CardDescription, CardDate } from '../Card'; 
 
 export interface Props { 
@@ -28,7 +28,7 @@ const TimelineEvent = ({
   onMouseEnter, 
   onMouseLeave,
 }: Props): JSX.Element => (
-  <EventContainer icon={TimelinePoint}>
+  <Container icon={TimelinePoint}>
     <Card 
       color={color} 
       backgroundColor={backgroundColor} 
@@ -49,7 +49,7 @@ const TimelineEvent = ({
         </span>
       </CardDate>
     </Card>
-  </EventContainer>
+  </Container>
 ); 
 
 export default TimelineEvent; 

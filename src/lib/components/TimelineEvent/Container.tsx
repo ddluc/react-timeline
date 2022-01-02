@@ -1,14 +1,14 @@
 import styled, { Theme } from 'styled-components';
 
-export interface EventContainerProps { 
+export interface ContainerProps { 
   icon: string
 }
 
-export interface ThemedProps extends EventContainerProps {
+export interface ThemedProps extends ContainerProps {
   theme: Theme;
 }
 
-export const EventContainer = styled.div<EventContainerProps>`
+export const Container = styled.div<ContainerProps>`
   &:before { 
     content: '';
     background: url("${ ({ icon }: ThemedProps) => icon }"); 
