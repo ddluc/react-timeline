@@ -1,16 +1,16 @@
 import styled, { Theme } from 'styled-components';
 
-export interface CardProps { 
+export interface Props { 
   active?: Boolean; 
   backgroundColor: string; 
   color?: string;
 }; 
 
-export interface ThemedCardProps extends CardProps {
+export interface ThemedCardProps extends Props {
   theme: Theme;
 }
 
-export const Card = styled.button<CardProps>`
+const Card = styled.button<Props>`
   padding: 10px; 
   width: 430px; 
   min-height: 120px; 
@@ -58,3 +58,5 @@ export const CardDate = styled.div`
     font-weight: normal; 
   }
 `; 
+
+export default Card; 

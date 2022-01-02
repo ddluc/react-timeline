@@ -1,8 +1,5 @@
 import React from 'react'; 
-import { Container } from './Container'; 
-import { Title } from './Title'; 
-import { SubTitle } from './SubTitle'
-import { Content } from './Content';
+import { Container, Title, SubTitle, Content } from './bin';
 
 import { ITimelineEvent } from '../../types';
 

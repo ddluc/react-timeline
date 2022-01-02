@@ -17,6 +17,7 @@ export interface Props {
   events: ITimelineEvent[];
   title?: string; 
   height?: number; 
+  width?: number; 
   showHeader?: boolean; 
   showDetailPanel?: boolean;
   theme?: Theme; 
@@ -26,6 +27,7 @@ const ReactTimeline = ({
   events,  
   title, 
   height,
+  width, 
   showHeader, 
   showDetailPanel,
   theme = DEFAULT_THEME
@@ -44,6 +46,7 @@ const ReactTimeline = ({
         showHeader={showHeader} 
         showDetailPanel={showDetailPanel}
         height={height}
+        width={width}
       />
     </ThemeProvider>
   ); 
@@ -52,7 +55,15 @@ const ReactTimeline = ({
 
 // Expose a render method for development
 export const render = (): void => { 
-  ReactDOM.render(<ReactTimeline events={getMockEvents(12)} />, document.getElementById('root'));
+  ReactDOM.render(
+    <ReactTimeline 
+      events={getMockEvents(12)} 
+      height={600}
+      showHeader 
+      showDetailPanel
+      />, 
+      document.getElementById('root')
+  );
 }
 
 export default { ReactTimeline, render }; 

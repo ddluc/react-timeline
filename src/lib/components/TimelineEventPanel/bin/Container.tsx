@@ -9,5 +9,4 @@ export const Container = styled.div`
   padding-left: 40px; 
   height: 100%; 
   border-color: ${({ theme }: ThemedProps ) => theme.palette.common.grey }; 
-  width: 600px; 
 `; 

@@ -1,10 +1,8 @@
 import React from 'react';
-import { Container } from './Container';
 import { TimelineEvent } from "../TimelineEvent";
 import { TimelineHeader } from '../TimelineHeader';
 import { TimelineEventPanel } from '../TimelineEventPanel';
-import { LeftPanel } from './LeftPanel';
-import { RightPanel } from './RightPanel';
+import { Container, LeftPanel, RightPanel, MainPanel } from './bin';
 
 import { ITimelineEvent } from "../../types";
 
@@ -13,6 +11,7 @@ export interface Props {
   activeEventId?: string; 
   title?: string; 
   height?: number; 
+  width?: number;
   showHeader?: boolean; 
   showDetailPanel?: boolean;
   onClick?: (id: string) => void; 
@@ -24,7 +23,8 @@ const Timeline = ({
   events, 
   activeEventId, 
   title = 'React Timeline',
-  height = 600,
+  height = 800,
+  width, 
   showHeader = true, 
   showDetailPanel = true,
   onClick, 
@@ -65,30 +65,32 @@ const Timeline = ({
   }; 
 
   return (
-    <Container height={height}>
+    <Container>
       { showHeader && <TimelineHeader title={title} />}
-      <LeftPanel>
-        { 
-          events.map((event, index) => (
-            <TimelineEvent 
-              key={event.id}
-              id={event.id}
-              title={event.title}
-              description={event.description}
-              date={event.date}
-              active={eventId === event.id}
-              onClick={onTimelineEventClick}
-              onMouseEnter={onTimelineEventMouseEnter}
-              onMouseLeave={onTimelineEventMouseLeave}
-            />
-          )) 
-        }
-      </LeftPanel>
-      { showDetailPanel && (
-        <RightPanel>
-          <TimelineEventPanel event={getActiveEvent(eventId)} />
-        </RightPanel>  
-      )}
+      <MainPanel height={height} width={width}>
+        <LeftPanel>
+          { 
+            events.map((event, index) => (
+              <TimelineEvent 
+                key={event.id}
+                id={event.id}
+                title={event.title}
+                description={event.description}
+                date={event.date}
+                active={eventId === event.id}
+                onClick={onTimelineEventClick}
+                onMouseEnter={onTimelineEventMouseEnter}
+                onMouseLeave={onTimelineEventMouseLeave}
+              />
+            )) 
+          }
+        </LeftPanel>
+        { showDetailPanel && (
+          <RightPanel>
+            <TimelineEventPanel event={getActiveEvent(eventId)} />
+          </RightPanel>  
+        )}
+      </MainPanel>
     </Container>
   ); 
 

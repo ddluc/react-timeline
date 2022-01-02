@@ -1,6 +1,5 @@
 import React from 'react'; 
-import { Container } from './Container'; 
-import { Title } from './Title'; 
+import { Container, Title } from './bin';
 
 export interface Props {
   title?: string

@@ -1,6 +1,6 @@
 import React from 'react'; 
 import TimelinePoint from '../../../assets/svg/timeline-point.svg';
-import { Container } from './Container';
+import { Container } from './bin';
 import { Card, CardTitle, CardDescription, CardDate } from '../Card'; 
 
 export interface Props { 
