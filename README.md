@@ -21,11 +21,7 @@ npm install react-timeline --save
 ### Example Usage 
 
 ```
-import { 
-  ReactTimeline, 
-  ITimelineEvent, 
-  ITimelineTheme
-} from 'react-timeline'
+import Timeline, { TimelineProps, ITimelineEvent } from 'react-timeline';
 
 interface Props {
   events: ITimelineEvent[]
@@ -35,13 +31,13 @@ interface Props {
 const theme = { }; 
 
 const MyComponent = ({ events }: ): JSX.Element => (
-  <ReactTimeline 
+  <Timeline 
       events={events} 
       height={600}
       showHeader 
       showDetailPanel
       theme={theme}
-      />, 
+  />, 
 ); 
 
 ```

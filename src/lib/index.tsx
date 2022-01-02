@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { ThemeProvider, Theme } from "styled-components";
 
 import GlobalFonts from '../theme/fonts';
