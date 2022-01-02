@@ -10,9 +10,6 @@ import { logBuild } from './util';
 import { Timeline } from './components/Timeline';
 import { ITimelineEvent } from './types';
 
-import { getMockEvents } from './mocks';
-
-
 export interface Props {
   events: ITimelineEvent[];
   title?: string; 
@@ -51,17 +48,4 @@ export const ReactTimeline = ({
     </ThemeProvider>
   ); 
   
-}
-
-// Expose a render method for development
-export const render = (): void => { 
-  ReactDOM.render(
-    <ReactTimeline 
-      events={getMockEvents(12)} 
-      height={600}
-      showHeader 
-      showDetailPanel
-      />, 
-      document.getElementById('root')
-  );
 }
