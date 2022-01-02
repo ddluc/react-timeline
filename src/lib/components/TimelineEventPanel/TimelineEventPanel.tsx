@@ -24,7 +24,7 @@ const TimelineEventPanel = ({ event }: Props): JSX.Element => {
   return (
     <Container>
       <Title>{event.title}</Title>
-      <SubTitle>{event.date.toLocaleDateString()}</SubTitle>
+      <SubTitle>{event.date.toLocaleDateString()} {event.date.toLocaleTimeString()}</SubTitle>
       <Content>
         { content ? content : 'Loading...' }
       </Content>
