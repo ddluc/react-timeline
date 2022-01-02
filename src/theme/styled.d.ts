@@ -25,6 +25,12 @@ declare module 'styled-components' {
       primary: Palette;
       secondary: Palette;
    };
+   breakpoints: {
+     lg: string; 
+     md: string; 
+     sm: string; 
+     xs: string; 
+   }
   }
 
 }

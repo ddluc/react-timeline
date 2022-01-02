@@ -14,4 +14,9 @@ export const MainPanel = styled.div<Props>`
   flex-wrap: no-wrap;
   height: ${ ({ height }: ThemedProps ) => `${height}px` };
   width: ${ ({ width }: ThemedProps ) => (width ? `${width}px` : '100%' )};
+  @media screen and (max-width: ${ ({ theme }: ThemedProps ) => theme.breakpoints.sm }) {
+    width: 100%;   
+    height: auto; 
+  } 
+  
 `;

@@ -7,9 +7,12 @@ export interface ThemedProps extends Props {
 }
 
 export const LeftPanel = styled.div<Props>`
-  width: 500px; 
   height: 100%; 
   overflow: scroll; 
   padding-left: 10px; 
+  padding-right: 40px; 
   flex-shrink: 0; 
+  @media screen and (max-width: ${ ({ theme }: ThemedProps ) => theme.breakpoints.sm }) {
+    width: 95%;
+  } 
 `; 

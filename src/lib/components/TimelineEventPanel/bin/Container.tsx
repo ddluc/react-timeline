@@ -6,7 +6,7 @@ export interface ThemedProps {
 
 export const Container = styled.div`
   border-left: solid 1px; 
-  padding-left: 40px; 
+  padding: 0px 20px 0px 40px; 
   height: 100%; 
   border-color: ${({ theme }: ThemedProps ) => theme.palette.common.grey }; 
 `; 

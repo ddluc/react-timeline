@@ -14,7 +14,7 @@ export default {
     height: { control: 'number' }
   }, 
   args: {
-    height: 450,
+    height: 520,
     title: 'React Timeline', 
     showHeader: false, 
     showDetailPanel: true,

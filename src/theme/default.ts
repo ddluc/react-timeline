@@ -24,5 +24,11 @@ export const theme: Theme = {
       main: '#69B56A', 
       contrastText: '#FFFFFF'
     }
+  },
+  breakpoints: { 
+    lg: '1200px', 
+    md: '1040px', 
+    sm: '720px', 
+    xs: '400px'
   }
 }
