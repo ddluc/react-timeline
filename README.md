@@ -1,7 +1,9 @@
 ## React Timeline
 
 A simple and customizable timeline component for react apps with additional dependencies written in Typescript. 
-s
+
+See the **[Live Demo](https://ddluc.github.io/react-timeline/?path=/story/timeline--default)**
+
 ### Installation 
 
 ```
