@@ -10,17 +10,26 @@ import { logBuild } from './util';
 import { Timeline } from './components/Timeline';
 import { ITimelineEvent } from './types';
 
-import { events as MOCK_EVENTS } from './mocks';
+import { getMockEvents } from './mocks';
 
 
 export interface Props {
   events: ITimelineEvent[];
-  showHeader?: boolean; 
   title?: string; 
-  theme: Theme; 
+  height?: number; 
+  showHeader?: boolean; 
+  showDetailPanel?: boolean;
+  theme?: Theme; 
 }
 
-const ReactTimeline = ({ events, showHeader, title, theme }: Props): JSX.Element => {
+const ReactTimeline = ({ 
+  events,  
+  title, 
+  height,
+  showHeader, 
+  showDetailPanel,
+  theme = DEFAULT_THEME
+}: Props): JSX.Element => {
 
   React.useEffect((() => {
     logBuild(); 
@@ -29,7 +38,13 @@ const ReactTimeline = ({ events, showHeader, title, theme }: Props): JSX.Element
   return (
     <ThemeProvider theme={theme}>
       { theme.id === '__default' && <GlobalFonts /> }
-      <Timeline showHeader={showHeader} title={title} events={events} />
+      <Timeline 
+        title={title} 
+        events={events}
+        showHeader={showHeader} 
+        showDetailPanel={showDetailPanel}
+        height={height}
+      />
     </ThemeProvider>
   ); 
   
@@ -37,7 +52,7 @@ const ReactTimeline = ({ events, showHeader, title, theme }: Props): JSX.Element
 
 // Expose a render method for development
 export const render = (): void => { 
-  ReactDOM.render(<ReactTimeline events={MOCK_EVENTS} theme={DEFAULT_THEME}/>, document.getElementById('root'));
+  ReactDOM.render(<ReactTimeline events={getMockEvents(12)} />, document.getElementById('root'));
 }
 
 export default { ReactTimeline, render }; 

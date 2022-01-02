@@ -11,8 +11,10 @@ import { ITimelineEvent } from "../../types";
 export interface Props { 
   events: ITimelineEvent[]
   activeEventId?: string; 
-  showHeader?: boolean; 
   title?: string; 
+  height?: number; 
+  showHeader?: boolean; 
+  showDetailPanel?: boolean;
   onClick?: (id: string) => void; 
   onMouseEnter?: (id: string) => void,
   onMouseLeave?: (id: string) => void,
@@ -21,8 +23,10 @@ export interface Props {
 const Timeline = ({ 
   events, 
   activeEventId, 
-  showHeader = true, 
   title = 'React Timeline',
+  height = 600,
+  showHeader = true, 
+  showDetailPanel = true,
   onClick, 
   onMouseEnter, 
   onMouseLeave
@@ -61,7 +65,7 @@ const Timeline = ({
   }; 
 
   return (
-    <Container>
+    <Container height={height}>
       { showHeader && <TimelineHeader title={title} />}
       <LeftPanel>
         { 
@@ -80,9 +84,11 @@ const Timeline = ({
           )) 
         }
       </LeftPanel>
-      <RightPanel>
-        <TimelineEventPanel event={getActiveEvent(eventId)} />
-      </RightPanel>
+      { showDetailPanel && (
+        <RightPanel>
+          <TimelineEventPanel event={getActiveEvent(eventId)} />
+        </RightPanel>  
+      )}
     </Container>
   ); 
 

@@ -8,4 +8,7 @@ export interface ThemedProps extends Props {
 
 export const LeftPanel = styled.div<Props>`
   width: 500px; 
+  height: 100%; 
+  overflow: scroll; 
+  padding-left: 10px; 
 `; 
