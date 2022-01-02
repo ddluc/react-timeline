@@ -2,6 +2,9 @@ import React from 'react';
 import { Container } from './Container';
 import { TimelineEvent } from "../TimelineEvent";
 import { TimelineHeader } from '../TimelineHeader';
+import { TimelineEventPanel } from '../TimelineEventPanel';
+import { LeftPanel } from './LeftPanel';
+import { RightPanel } from './RightPanel';
 
 import { ITimelineEvent } from "../../types";
 
@@ -53,23 +56,33 @@ const Timeline = ({
     if (activeEventId && onMouseLeave) onMouseLeave(id); 
   }
 
+  const getActiveEvent = (id: string): ITimelineEvent => { 
+    return events.find((event: ITimelineEvent) => event.id === id); 
+  }; 
+
   return (
     <Container>
       { showHeader && <TimelineHeader title={title} />}
-      { 
-        events.map((event, index) => (
-          <TimelineEvent 
-            id={event.id}
-            title={event.title}
-            description={event.description}
-            date={event.date}
-            active={eventId === event.id}
-            onClick={onTimelineEventClick}
-            onMouseEnter={onTimelineEventMouseEnter}
-            onMouseLeave={onTimelineEventMouseLeave}
-          />
-        )) 
-      }
+      <LeftPanel>
+        { 
+          events.map((event, index) => (
+            <TimelineEvent 
+              key={event.id}
+              id={event.id}
+              title={event.title}
+              description={event.description}
+              date={event.date}
+              active={eventId === event.id}
+              onClick={onTimelineEventClick}
+              onMouseEnter={onTimelineEventMouseEnter}
+              onMouseLeave={onTimelineEventMouseLeave}
+            />
+          )) 
+        }
+      </LeftPanel>
+      <RightPanel>
+        <TimelineEventPanel event={getActiveEvent(eventId)} />
+      </RightPanel>
     </Container>
   ); 
 

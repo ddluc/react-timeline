@@ -5,11 +5,8 @@ export interface ThemedProps {
   theme: Theme;
 }
 
-export const Title = styled.h2`
-  padding-bottom: 10px; 
+export const SubTitle = styled.h5`
   font-family: ${({ theme }: ThemedProps ) => theme.fonts.mono }; 
+  font-weight: normal; 
   color: ${({ theme }: ThemedProps ) => theme.palette.common.black }; 
-  border-bottom: solid 1px; 
-  border-color: ${({ theme }: ThemedProps ) => theme.palette.common.grey }; 
-  margin: 0px; 
-`; 
+`;

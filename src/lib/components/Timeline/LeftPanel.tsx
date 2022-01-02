@@ -6,8 +6,6 @@ export interface ThemedProps extends Props {
   theme: Theme;
 }
 
-export const Container = styled.div<Props>`
-  display: flex; 
-  flex-wrap: wrap;
+export const LeftPanel = styled.div<Props>`
+  width: 500px; 
 `; 
-
