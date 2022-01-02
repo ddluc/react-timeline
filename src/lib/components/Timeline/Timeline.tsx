@@ -33,6 +33,7 @@ const Timeline = ({
 }: Props): JSX.Element => { 
 
   const getInitialEvent = (): string  => { 
+    if (!events) return ''; 
     if (activeEventId) { 
       return activeEventId; 
     }
@@ -63,6 +64,11 @@ const Timeline = ({
   const getActiveEvent = (id: string): ITimelineEvent => { 
     return events.find((event: ITimelineEvent) => event.id === id); 
   }; 
+
+  // Fail-safe in case no events are provided to the timeline 
+  if (!events) { 
+    return <div><p>No Events To Display</p></div>; 
+  }
 
   return (
     <Container>

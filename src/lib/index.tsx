@@ -23,7 +23,7 @@ export interface Props {
   theme?: Theme; 
 }
 
-const ReactTimeline = ({ 
+export const ReactTimeline = ({ 
   events,  
   title, 
   height,
@@ -65,5 +65,3 @@ export const render = (): void => {
       document.getElementById('root')
   );
 }
-
-export default { ReactTimeline, render }; 
