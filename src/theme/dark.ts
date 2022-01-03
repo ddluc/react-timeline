@@ -3,21 +3,20 @@ import { Theme } from 'styled-components'
 
 export const theme: Theme = {
   id: '__default', 
-  background: '#FFFFFF', 
   fonts: { 
-    main: 'IBM Plex Mono',
-    secondary:'IBM Plex Sans',
+    main: 'IBM Plex Sans',
+    secondary:'IBM Plex Mono',
   },
   border: { 
-    color: '#E6E6E6', 
-    radius: '4px'
+    color: '#1E526B', 
+    radius: '0px'
   },
   timeline: {
-    color: '#A3ACB9', 
+    color: '#2D7CA1',
     spacing: {
       top: '10px', 
-      bottom: '10px'
-    },
+      bottom: '15px'
+    }, 
     point: {
       spacing: {
         top: '0px', 
@@ -26,35 +25,36 @@ export const theme: Theme = {
     }
   }, 
   header: { 
-    color: '#313C4C'
+    color: '#E6E6E6'
   },
   card: {
     colors: {
       text: '#5F646A', 
-      background: '#FFFFFF',
-      active: { 
-        border: '#69B56A',
-        background: '#FFFFFF',
-        text: '#5F646A', 
+      background: '#E3ECFA', 
+      active: {
+        border: '#42B7ED', 
+        background: '#42B7ED', 
+        text: '#FFFFFF'
       }
     },
     shadow: '2px 2px 4px 0px rgba(0,0,0, 0.2)',
     spacing: {
-      top: '10px', 
-      bottom: '15px'
+      top: '0px', 
+      bottom: '0px'
     }
   }, 
   panel: { 
     colors: { 
-      title: '#5F646A',
-      subtitle: '#5F646A', 
-      content: '#5F646A' 
+      title: '#E6E6E6',
+      subtitle: '#E6E6E6', 
+      content: '#E6E6E6' 
     },
     padding: { 
       left: '40px',  
       right: '20px' 
     }
   }, 
+  background: '#09181F', 
   breakpoints: { 
     lg: '1200px', 
     md: '1040px', 

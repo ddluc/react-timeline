@@ -30,7 +30,6 @@ const TimelineEvent = ({
   onMouseEnter, 
   onMouseLeave,
 }: Props): JSX.Element => {
-
   return (
     <Container>
       <Separator data-name="separator">

@@ -3,6 +3,7 @@ import { Theme } from 'styled-components'
 
 export const theme: Theme = {
   id: '__default', 
+  background: '#FFFFFF', 
   fonts: { 
     main: 'IBM Plex Mono',
     secondary:'IBM Plex Sans',
@@ -54,7 +55,6 @@ export const theme: Theme = {
       right: '20px' 
     }
   }, 
-  background: '#FFFFFF', 
   breakpoints: { 
     lg: '1200px', 
     md: '1040px', 

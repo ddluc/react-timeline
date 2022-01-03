@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>icon-3</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-24.000000, -744.000000)">
+            <g id="icon-3" transform="translate(24.000000, 744.000000)">
+                <circle id="Oval" fill="#76C2AF" fill-rule="nonzero" cx="32" cy="32" r="32"></circle>
+                <path d="M46,32 C49.3,32 52,34.7 52,38 C52,41.3 49.3,44 46,44 C42.7,44 40,41.3 40,38 C40,34.7 42.7,32 46,32 M46,28 C40.5,28 36,32.5 36,38 C36,43.5 40.5,48 46,48 C51.5,48 56,43.5 56,38 C56,32.5 51.5,28 46,28 L46,28 Z" id="Shape" fill="#231F20" fill-rule="nonzero" opacity="0.2"></path>
+                <path d="M18,31 C21.9,31 25,34.1 25,38 C25,41.9 21.9,45 18,45 C14.1,45 11,41.9 11,38 C11,34.1 14.1,31 18,31 M18,28 C12.5,28 8,32.5 8,38 C8,43.5 12.5,48 18,48 C23.5,48 28,43.5 28,38 C28,32.5 23.5,28 18,28 L18,28 Z" id="Shape" fill="#231F20" fill-rule="nonzero" opacity="0.2"></path>
+                <path d="M18,29 C21.9,29 25,32.1 25,36 C25,39.9 21.9,43 18,43 C14.1,43 11,39.9 11,36 C11,32.1 14.1,29 18,29 M18,26 C12.5,26 8,30.5 8,36 C8,41.5 12.5,46 18,46 C23.5,46 28,41.5 28,36 C28,30.5 23.5,26 18,26 L18,26 Z" id="Shape" fill="#4F5D73" fill-rule="nonzero"></path>
+                <path d="M46,29 C49.9,29 53,32.1 53,36 C53,39.9 49.9,43 46,43 C42.1,43 39,39.9 39,36 C39,32.1 42.1,29 46,29 M46,26 C40.5,26 36,30.5 36,36 C36,41.5 40.5,46 46,46 C51.5,46 56,41.5 56,36 C56,30.5 51.5,26 46,26 L46,26 Z" id="Shape" fill="#4F5D73" fill-rule="nonzero"></path>
+                <path d="M47.3,37.3 L38.3,19.8 C38.1,19.3 37.6,19 37,19 L32,19 C31.2,19 30.5,19.7 30.5,20.5 C30.5,21.3 31.2,22 32,22 L36.1,22 L39.2,28 L30.5,28 L28.4,23.8 C28.1,23.3 27.6,23 27,23 L22,23 C21.2,23 20.5,23.7 20.5,24.5 C20.5,25.3 21.2,26 22,26 L26.1,26 L27.5,28.8 L17.1,37.3 C16.6,37.7 16.4,38.4 16.6,39 C16.8,39.6 17.4,40 18,40 L32,40 C32.4,40 32.8,39.8 33.1,39.6 L41.1,31.6 L44.7,38.7 C45,39.2 45.5,39.5 46,39.5 C46.2,39.5 46.5,39.4 46.7,39.3 C47.4,39 47.7,38.1 47.3,37.3 Z M22.2,37 L28.9,31.6 L31.6,36.9 L31.4,37 L22.2,37 Z M33.7,34.6 L31.9,31 L37.4,31 L33.7,34.6 Z" id="Shape" fill="#231F20" fill-rule="nonzero" opacity="0.2"></path>
+                <polyline id="Path" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="46 36 37 18.5 32 18.5"></polyline>
+                <polyline id="Path" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="33 34 27 22.5 22 22.5"></polyline>
+                <polygon id="Path" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="18 36.5 32 36.5 41 27.5 29 27.5"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

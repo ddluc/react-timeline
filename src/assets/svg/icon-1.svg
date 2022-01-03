@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>icon-1</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-24.000000, -927.000000)" fill-rule="nonzero">
+            <g id="icon-1" transform="translate(24.000000, 927.000000)">
+                <circle id="Oval" fill="#4F5D73" cx="32" cy="32" r="32"></circle>
+                <g id="Group" opacity="0.2" transform="translate(12.000000, 14.000000)" fill="#231F20">
+                    <circle id="Oval" cx="10" cy="10" r="10"></circle>
+                </g>
+                <circle id="Oval" fill="#E0995E" cx="22" cy="22" r="10"></circle>
+                <g id="Group" opacity="0.2" transform="translate(12.000000, 22.000000)" fill="#231F20">
+                    <path d="M36.7,14 C36.7,6.3 30.1,0 22,0 C15.1,0 9.4,4.5 7.8,10.6 C3.4,11.2 0,14.9 0,19.2 C0,24 4.1,28 9.2,28 L36.7,28 C40.8,28 44,24.9 44,21 C44,17.1 40.7,14 36.7,14 Z" id="Path"></path>
+                </g>
+                <g id="Group" opacity="0.2" transform="translate(16.000000, 19.000000)" fill="#231F20">
+                    <path d="M16,3 C16,2 15.8,1 15.6,0.1 C9.4,0.7 4.3,5 2.8,10.6 C2,10.7 1.2,11 0.4,11.3 C2,12.4 3.9,13 6,13 C11.5,13 16,8.5 16,3 Z" id="Path"></path>
+                </g>
+                <path d="M48.7,34 C48.7,26.3 42.1,20 34,20 C27.1,20 21.4,24.5 19.8,30.6 C15.4,31.2 12,34.9 12,39.2 C12,44 16.1,48 21.2,48 L48.7,48 C52.8,48 56,44.9 56,41 C56,37.1 52.7,34 48.7,34 Z" id="Path" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>icon-5</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-24.000000, -545.000000)" fill-rule="nonzero">
+            <g id="icon-5" transform="translate(24.000000, 545.000000)">
+                <circle id="Oval" fill="#C75C5C" cx="32" cy="32" r="32"></circle>
+                <g id="Group" opacity="0.2" transform="translate(12.000000, 14.000000)" fill="#231F20">
+                    <path d="M5,36 C0.6,36 -1.2,32.9 1,29.1 L16,3 C18.2,-0.8 21.8,-0.8 24,3 L39,29.1 C41.2,32.9 39.4,36 35,36 L5,36 Z" id="Path"></path>
+                </g>
+                <path d="M17,48 C12.6,48 10.8,44.9 13,41.1 L28,15 C30.2,11.2 33.8,11.2 36,15 L51,41.1 C53.2,44.9 51.4,48 47,48 L17,48 Z" id="Path" fill="#F5CF87"></path>
+                <path d="M34,32 C34,33.1 33.1,34 32,34 L32,34 C30.9,34 30,33.1 30,32 L30,24 C30,22.9 30.9,22 32,22 L32,22 C33.1,22 34,22.9 34,24 L34,32 Z" id="Path" fill="#4F5D73"></path>
+                <path d="M34,40 C34,41.1 33.1,42 32,42 L32,42 C30.9,42 30,41.1 30,40 L30,40 C30,38.9 30.9,38 32,38 L32,38 C33.1,38 34,38.9 34,40 L34,40 Z" id="Path" fill="#4F5D73"></path>
+            </g>
+        </g>
+    </g>
+</svg>

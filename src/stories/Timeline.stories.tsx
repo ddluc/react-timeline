@@ -4,9 +4,8 @@ import { ReactTimeline, Props as ReactTimelineProps } from '../lib/index';
 import { getMockEvents } from '../lib/mocks';
 import TimelinePointAltIcon from '../assets/svg/timeline-point-alt.svg';
 import { theme as DEFAULT_THEME } from '../theme/default';
+import { theme as DARK_THEME } from '../theme/dark';
 import { theme as ALT_THEME } from '../theme/alt';
-
-const MOCK_EVENTS = getMockEvents(); 
 
 export default {
   title: 'Timeline',
@@ -15,12 +14,12 @@ export default {
     height: { control: 'number' }
   }, 
   args: {
-    height: 520,
+    height: 480,
     title: 'React Timeline', 
     showHeader: false, 
-    showDetailPanel: true,
+    showDetailPanel: false,
     theme: DEFAULT_THEME,
-    events: MOCK_EVENTS
+    events: getMockEvents(),
   } as ReactTimelineProps
 } as ComponentMeta<typeof ReactTimeline>;
 
@@ -28,11 +27,26 @@ const Template: ComponentStory<typeof ReactTimeline> = (args: ReactTimelineProps
   return (<ReactTimeline {...args} />); 
 }; 
 
+// 1. Default 
 export const Default = Template.bind({});
 
-export const Alternate = Template.bind({})
-
-Alternate.args = { 
-  theme: ALT_THEME,
+// 2. Dark (With Custom Icon)
+export const Dark = Template.bind({})
+Dark.args = { 
+  theme: DARK_THEME,
   icon: <TimelinePointAltIcon />
+}; 
+
+// 3. With Custom Icons (With Custom Event Icons)
+export const WithCustomIcons = Template.bind({}); 
+WithCustomIcons.args = { 
+  theme: ALT_THEME,
+  events: getMockEvents(10, true)
+}; 
+
+// 4. With Detail Panel
+export const WithDetailPanel = Template.bind({}); 
+WithDetailPanel.args = { 
+  theme: DEFAULT_THEME,
+  showDetailPanel: true,
 }; 

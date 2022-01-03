@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>icon-4</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-24.000000, -650.000000)" fill-rule="nonzero">
+            <g id="icon-4" transform="translate(24.000000, 650.000000)">
+                <circle id="Oval" fill="#C75C5C" cx="32" cy="32" r="32"></circle>
+                <g id="Group" opacity="0.2" transform="translate(14.000000, 14.000000)" fill="#231F20">
+                    <path d="M6,20 L30,20 C31.1,20 32,19.1 32,18 L32,6 C32,4.9 31.1,4 30,4 L6,4 C4.9,4 4,4.9 4,6 L4,18 C4,19.1 4.9,20 6,20 Z" id="Path"></path>
+                    <path d="M30,0 L6,0 C2.7,0 0,2.7 0,6 L0,18 L0,30 C0,33.3 2.7,36 6,36 L30,36 C33.3,36 36,33.3 36,30 L36,18 L36,6 C36,2.7 33.3,0 30,0 Z M4,6 C4,4.9 4.9,4 6,4 L30,4 C31.1,4 32,4.9 32,6 L32,18 C32,19.1 31.1,20 30,20 L6,20 C4.9,20 4,19.1 4,18 L4,6 Z" id="Shape"></path>
+                    <circle id="Oval" cx="30" cy="30" r="2"></circle>
+                    <path d="M28,38 L8,38 C6.9,38 6,38.9 6,40 C6,41.1 6.9,42 8,42 L28,42 C29.1,42 30,41.1 30,40 C30,38.9 29.1,38 28,38 Z" id="Path"></path>
+                </g>
+                <path d="M48,42 C48,44.2 46.2,46 44,46 L20,46 C17.8,46 16,44.2 16,42 L16,18 C16,15.8 17.8,14 20,14 L44,14 C46.2,14 48,15.8 48,18 L48,42 Z" id="Path" stroke="#FFFFFF" stroke-width="4" fill="#FFFFFF"></path>
+                <path d="M48,30 C48,32.2 46.2,34 44,34 L20,34 C17.8,34 16,32.2 16,30 L16,18 C16,15.8 17.8,14 20,14 L44,14 C46.2,14 48,15.8 48,18 L48,30 Z" id="Path" stroke="#FFFFFF" stroke-width="4" fill="#4F5D73"></path>
+                <path d="M20,46 L44,46 C46.2,46 48,44.2 48,42 L48,38 L16,38 L16,42 C16,44.2 17.8,46 20,46 Z" id="Path" stroke="#E0E0D1" stroke-width="4" fill="#E0E0D1"></path>
+                <path d="M24,42 C24,44.2 22.2,46 20,46 L20,46 C17.8,46 16,44.2 16,42 L16,42 C16,39.8 17.8,38 20,38 L20,38 C22.2,38 24,39.8 24,42 L24,42 Z" id="Path" stroke="#E0E0D1" stroke-width="4" fill="#E0995E"></path>
+                <path d="M48,42 C48,44.2 46.2,46 44,46 L44,46 C41.8,46 40,44.2 40,42 L40,42 C40,39.8 41.8,38 44,38 L44,38 C46.2,38 48,39.8 48,42 L48,42 Z" id="Path" stroke="#E0E0D1" stroke-width="4" fill="#E0995E"></path>
+                <path d="M44,52 C44,53.1 43.1,54 42,54 L22,54 C20.9,54 20,53.1 20,52 L20,52 C20,50.9 20.9,50 22,50 L42,50 C43.1,50 44,50.9 44,52 L44,52 Z" id="Path" fill="#F5CF87"></path>
+            </g>
+        </g>
+    </g>
+</svg>
