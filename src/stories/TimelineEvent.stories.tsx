@@ -18,7 +18,8 @@ export default {
     date: new Date(), 
     active: false, 
     color: undefined, 
-    backgroundColor: undefined
+    backgroundColor: undefined, 
+    display: 'normal',
   } as TimelineEventProps
 } as ComponentMeta<typeof TimelineEvent>;
 
