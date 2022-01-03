@@ -29,14 +29,14 @@ const setMinWidth =  (size: ButtonSize): string => {
 }
 
 export const Button = styled.button<StyledProps>`
-  font-family: ${ ({ theme }: ThemedProps) => theme.fonts.mono }; 
+  font-family: ${ ({ theme }: ThemedProps) => theme.fonts.main }; 
   size: ${ (props) => setMinWidth(props.size)}; 
   padding: ${(props) => setPadding(props.size)};
   background-color: ${ 
-    ({ theme, backgroundColor }: ThemedProps) => backgroundColor ? backgroundColor : theme.palette.secondary.main 
+    ({ theme, backgroundColor }: ThemedProps) => backgroundColor ? backgroundColor : theme.card.colors.accent 
   }; 
   color: ${ 
-    ({ theme, color }: ThemedProps ) => color ? color : theme.palette.secondary.contrastText 
+    ({ theme, color }: ThemedProps ) => color ? color : '#FFFFFF' 
   }; 
   outline: none; 
   border: none; 

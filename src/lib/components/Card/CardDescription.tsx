@@ -6,8 +6,8 @@ export interface ThemedProps {
 
 export const CardDescription = styled.div`
   > p {
-    font-family: ${ ({ theme }: ThemedProps ) => theme.fonts.mono };
-    color: ${ ( { theme }: ThemedProps ) => theme.palette.common.charcoal };
+    font-family: ${ ({ theme }: ThemedProps ) => theme.fonts.main };
+    color: ${ ( { theme }: ThemedProps ) => theme.card.colors.description };
     text-align: left; 
     font-size: 12px; 
     font-weight: normal; 

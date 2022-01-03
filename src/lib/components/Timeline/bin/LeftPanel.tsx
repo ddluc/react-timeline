@@ -15,4 +15,7 @@ export const LeftPanel = styled.div<Props>`
   @media screen and (max-width: ${ ({ theme }: ThemedProps ) => theme.breakpoints.sm }) {
     width: 95%;
   } 
+  @media screen and (max-width: ${ ({ theme }: ThemedProps ) => theme.breakpoints.xs }) {
+    width: 85%;
+  } 
 `; 

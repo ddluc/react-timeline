@@ -11,6 +11,7 @@ const TimelineEventPanel = ({ event }: Props): JSX.Element => {
 
   const [content, setContent ] = React.useState<React.ReactNode | null>(null); 
 
+  // TODO: memoize fetch content 
   const fetchContent = async (event: ITimelineEvent) => { 
     setContent(null); 
     setContent(await event.content()); 

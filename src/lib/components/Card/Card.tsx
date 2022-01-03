@@ -18,15 +18,15 @@ const Card = styled.button<Props>`
   cursor: pointer; 
   flex-direction: column; 
   justify-content: space-between;
-  background-color: ${ ({ theme, backgroundColor }: ThemedProps ) => backgroundColor || theme.palette.common.white}; 
+  background-color: ${ ({ theme, backgroundColor }: ThemedProps ) => backgroundColor || theme.card.colors.background }; 
   border: solid 1px; 
   border-color: ${ ({ theme, active, color }: ThemedProps ) => 
-    (active ? color || theme.palette.secondary.main : theme.palette.common.grey ) 
+    (active ? color || theme.card.colors.accent : theme.border.color ) 
   };
-  border-radius: ${ ({ theme }: ThemedProps ) => theme.borderRadius };
+  border-radius: ${ ({ theme }: ThemedProps ) => theme.border.radius };
   /* offset-x | offset-y | blur-radius | spread-radius | color */
   box-shadow: ${ ({ theme, active }: ThemedProps ) => 
-    (active ? '2px 2px 4px 0px rgba(0,0,0, 0.2) ' : 'none' )
+    (active ? theme.card.shadow : 'none' )
   };
   @media screen and (max-width: ${ ({ theme }: ThemedProps ) => theme.breakpoints.md }) {
     width: 300px; 

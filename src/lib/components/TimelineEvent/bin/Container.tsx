@@ -30,7 +30,7 @@ export const Container = styled.div<ContainerProps>`
     top: 10px; 
     left: 0px;  
     border-left: solid 1px; 
-    border-color: ${ ({ theme }: ThemedProps ) => theme.palette.primary.main };
+    border-color: ${ ({ theme }: ThemedProps ) => theme.timeline.color };
   }
   position: relative;
   padding-left: 20px;

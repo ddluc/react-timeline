@@ -7,8 +7,8 @@ interface ThemedProps {
 
 export const CardDate = styled.div`
   > span {
-    font-family: ${ ({ theme }: ThemedProps ) => theme.fonts.mono };
-    color: ${ ( { theme }: ThemedProps ) => theme.palette.common.charcoal };
+    font-family: ${ ({ theme }: ThemedProps ) => theme.fonts.main };
+    color: ${ ( { theme }: ThemedProps ) => theme.card.colors.date };
     font-size: 12px; 
     font-weight: normal; 
   }

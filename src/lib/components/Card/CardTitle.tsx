@@ -6,8 +6,8 @@ export interface ThemedProps {
 
 export const CardTitle = styled.div`
   > h3 {
-    font-family: ${ ({ theme }: ThemedProps ) => theme.fonts.mono };
-    color: ${ ( { theme }: ThemedProps ) => theme.palette.common.charcoal };
+    font-family: ${ ({ theme }: ThemedProps ) => theme.fonts.main };
+    color: ${ ( { theme }: ThemedProps ) => theme.card.colors.title };
     text-align: left; 
     font-size: 16px; 
     font-weight: bold; 

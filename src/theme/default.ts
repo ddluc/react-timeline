@@ -3,28 +3,42 @@ import { Theme } from 'styled-components'
 
 export const theme: Theme = {
   id: '__default', 
-  borderRadius: '4px',
   fonts: { 
-    mono: 'IBM Plex Mono',
-    sans:'IBM Plex Sans',
-    serif: 'serif'
+    main: 'IBM Plex Mono',
+    secondary:'IBM Plex Sans',
   },
-  palette: {
-    common: {
-      black: '#000000',
-      white: '#FFFFFF', 
-      charcoal: '#5F646A',
-      grey: '#E6E6E6'
+  border: { 
+    color: '#E6E6E6', 
+    radius: '4px'
+  },
+  timeline: {
+    color: '#A3ACB9'
+  }, 
+  header: { 
+    color: '#313C4C'
+  },
+  card: {
+    colors: {
+      title: '#5F646A', 
+      description: '#5F646A', 
+      date: '#5F646A', 
+      accent: '#69B56A',
+      background: '#FFFFFF'
     },
-    primary: {
-      main: '#A3ACB9',
-      contrastText: '#FFFFFF'
+    shadow: '2px 2px 4px 0px rgba(0,0,0, 0.2)',
+  }, 
+  panel: { 
+    colors: { 
+      title: '#5F646A',
+      subtitle: '#5F646A', 
+      content: '#5F646A' 
     },
-    secondary: {
-      main: '#69B56A', 
-      contrastText: '#FFFFFF'
+    padding: { 
+      left: '40px',  
+      right: '20px' 
     }
-  },
+  }, 
+  background: '#FFFFFF', 
   breakpoints: { 
     lg: '1200px', 
     md: '1040px', 
