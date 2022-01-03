@@ -9,11 +9,7 @@ export interface ThemedProps extends ContainerProps {
 }
 
 export const Point = styled.div`
-  height: 14px; 
-  width: 14px; 
-  top: -6px; 
-  left: -6px;   
-  position: absolute; 
+  margin: 0px; 
   > svg {
     fill: ${ ({ theme } : ThemedProps) => theme.timeline.color }
   }

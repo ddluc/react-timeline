@@ -1,3 +1,4 @@
 export { Container } from './Container'; 
 export { Point } from './Point';
-export { Icon } from './Icon'; 
+export { Line } from './Line';
+export { Separator } from './Separator';

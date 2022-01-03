@@ -1,7 +1,7 @@
 import React from 'react'; 
 import TimelinePointSVG from '../../../assets/svg/timeline-point.svg';
 import { Card, CardTitle, CardDescription, CardDate } from '../Card'; 
-import { Container, Point, Icon } from './bin';
+import { Container, Point, Line, Separator } from './bin';
 
 export interface Props { 
   id: string;
@@ -33,9 +33,12 @@ const TimelineEvent = ({
 
   return (
     <Container>
-      <Point>
-        { icon  || <TimelinePointSVG />}
-      </Point>
+      <Separator data-name="separator">
+        <Point>
+          { icon  || <TimelinePointSVG />}
+        </Point>
+        <Line />
+      </Separator>
       <Card 
         color={color} 
         backgroundColor={backgroundColor} 

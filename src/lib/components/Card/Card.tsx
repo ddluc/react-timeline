@@ -12,6 +12,7 @@ export interface ThemedProps extends Props {
 
 const Card = styled.button<Props>`
   padding: 10px; 
+  margin: 10px 0px 15px 0px; 
   width: 430px; 
   min-height: 120px; 
   display: flex; 

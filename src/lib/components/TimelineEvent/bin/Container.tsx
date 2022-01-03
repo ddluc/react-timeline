@@ -5,17 +5,9 @@ export interface ThemedProps  {
 }
 
 export const Container = styled.div` 
-  &:after {
-    content: '';
-    position: absolute; 
-    height: 100%; 
-    width: 1px;
-    top: 12px; 
-    left: 0px;  
-    border-left: solid 1px; 
-    border-color: ${ ({ theme }: ThemedProps ) => theme.timeline.color };
-  }
+  display: flex; 
+  flex-direction: row; 
+  justify-content: flex-start;
   position: relative;
-  padding-left: 20px;
-  margin: 30px 0px;  
+  margin: 10px 0px 0px 0px;  
 `; 
