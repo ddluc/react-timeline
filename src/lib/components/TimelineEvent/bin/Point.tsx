@@ -14,9 +14,7 @@ export const Point = styled.div`
   top: -6px; 
   left: -6px;   
   position: absolute; 
-
-  > * { 
-    max-width: 100%; 
+  > svg {
+    fill: ${ ({ theme } : ThemedProps) => theme.timeline.color }
   }
-  
 `; 
