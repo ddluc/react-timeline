@@ -7,3 +7,6 @@ export default Package.ReactTimeline;
 // Export types
 export { Props } from './lib';
 export { ITimelineEvent } from './lib/types'; 
+
+// Export Themes
+export { default as TimelineTheme } from './theme';
