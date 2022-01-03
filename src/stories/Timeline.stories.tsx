@@ -2,7 +2,7 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ReactTimeline, Props as ReactTimelineProps } from '../lib/index'; 
 import { getMockEvents } from '../lib/mocks';
-import TimelinePointAltSVG from '../assets/svg/timeline-point-alt.svg';
+import TimelinePointAltIcon from '../assets/svg/timeline-point-alt.svg';
 import { theme as DEFAULT_THEME } from '../theme/default';
 import { theme as ALT_THEME } from '../theme/alt';
 
@@ -34,5 +34,5 @@ export const Alternate = Template.bind({})
 
 Alternate.args = { 
   theme: ALT_THEME,
-  icon: <img src={TimelinePointAltSVG} />
+  icon: <TimelinePointAltIcon />
 }; 

@@ -34,7 +34,7 @@ const TimelineEvent = ({
   return (
     <Container>
       <Point>
-        { icon  || <Icon src={TimelinePointSVG} alt="Timeline Point" />}
+        { icon  || <TimelinePointSVG />}
       </Point>
       <Card 
         color={color} 

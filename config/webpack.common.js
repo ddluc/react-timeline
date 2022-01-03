@@ -32,14 +32,19 @@ module.exports = {
         ],
       },
       {
-        test: /\.svg/,
+        test: /\.svg$/,
         use: [
           {
-            loader: 'svg-url-loader',
-            options: {  iesafe: true },
+            loader: "babel-loader"
           },
-        ],
-      },
+          {
+            loader: "react-svg-loader",
+            options: {
+              jsx: false
+            }
+          }
+        ]
+      }
     ],
   },
   resolve: {
