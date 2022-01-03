@@ -5,23 +5,23 @@ export const theme: Theme = {
   id: '__default', 
   background: '#FFFFFF', 
   fonts: { 
-    main: 'IBM Plex Sans',
-    secondary:'IBM Plex Mono',
+    main: 'IBM Plex Mono',
+    secondary:'IBM Plex Sans',
   },
   border: { 
-    color: '#FFFFFF', 
-    radius: '0px'
+    color: '#E6E6E6', 
+    radius: '4px'
   },
   timeline: {
     color: '#A3ACB9', 
     spacing: {
-      top: '10px', 
-      bottom: '100px'
+      top: '0px', 
+      bottom: '80px'
     },
     point: {
       spacing: {
-        top: '0px', 
-        bottom: '0px'
+        top: '4px', 
+        bottom: '4px'
       }
     }
   }, 
@@ -33,12 +33,12 @@ export const theme: Theme = {
       text: '#5F646A', 
       background: '#FFFFFF',
       active: { 
-        border: '#FFFFFF',
+        border: '#69B56A',
         background: '#FFFFFF',
         text: '#5F646A', 
       }
     },
-    shadow: 'none',
+    shadow: '2px 2px 4px 0px rgba(0,0,0, 0.2)',
     spacing: {
       top: '10px', 
       bottom: '15px'

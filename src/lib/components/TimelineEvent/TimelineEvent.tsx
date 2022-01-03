@@ -1,7 +1,8 @@
 import React from 'react'; 
 import TimelinePointSVG from '../../../assets/svg/timeline-point.svg';
+import { TimelineDisplay } from '../../types';
 import { Card, CardTitle, CardDescription, CardDate } from '../Card'; 
-import { Container, Point, Line, Separator } from './bin';
+import { Container, Point, Line, Separator, Condensed } from './bin';
 
 export interface Props { 
   id: string;
@@ -12,6 +13,7 @@ export interface Props {
   color?: string;
   backgroundColor?: string;
   icon?: React.ReactNode; 
+  display: TimelineDisplay; 
   onClick?: (id: string, ) => void;
   onMouseEnter?: (id: string) => void;
   onMouseLeave?: (id: string) => void;
@@ -26,38 +28,54 @@ const TimelineEvent = ({
   color, 
   icon,
   backgroundColor,
+  display,
   onClick, 
   onMouseEnter, 
   onMouseLeave,
 }: Props): JSX.Element => {
   return (
-    <Container>
+    <Container display={display}>
       <Separator data-name="separator">
         <Point>
           { icon  || <TimelinePointSVG />}
         </Point>
         <Line />
       </Separator>
-      <Card 
-        color={color} 
-        backgroundColor={backgroundColor} 
-        active={active}
-        onClick={() => onClick(id)}
-        onMouseEnter={() => onMouseEnter(id)}
-        onMouseLeave={() => onMouseLeave(id)}
-      >
-        <CardTitle active={active}>
-          <h3>{title}</h3>
-        </CardTitle>
-        <CardDescription active={active}>
-          <p>{description}</p>
-        </CardDescription >
-        <CardDate active={active}>
-          <span>
-            {date.toLocaleDateString()} {date.toLocaleTimeString()}
-          </span>
-        </CardDate>
-      </Card>
+      { display === 'normal' && 
+        (
+          <Card 
+            color={color} 
+            backgroundColor={backgroundColor} 
+            active={active}
+            onClick={() => onClick(id)}
+            onMouseEnter={() => onMouseEnter(id)}
+            onMouseLeave={() => onMouseLeave(id)}
+          >
+            <CardTitle active={active}>
+              <h3>{title}</h3>
+            </CardTitle>
+            <CardDescription active={active}>
+              <p>{description}</p>
+            </CardDescription >
+            <CardDate active={active}>
+              <span>
+                {date.toLocaleDateString()} {date.toLocaleTimeString()}
+              </span>
+            </CardDate>
+          </Card>
+          )
+      }
+      {
+        display === 'condensed' && 
+        (
+          <Condensed>
+            <h3>{title}</h3>
+            <span>
+              {date.toLocaleDateString()} {date.toLocaleTimeString()}
+            </span>
+          </Condensed>
+        )
+      }
     </Container>
   );
 }; 

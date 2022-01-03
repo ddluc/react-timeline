@@ -4,7 +4,7 @@ import { TimelineHeader } from '../TimelineHeader';
 import { TimelineEventPanel } from '../TimelineEventPanel';
 import { Container, LeftPanel, RightPanel, MainPanel } from './bin';
 
-import { ITimelineEvent } from "../../types";
+import { ITimelineEvent, TimelineDisplay } from "../../types";
 
 export interface Props { 
   events: ITimelineEvent[]
@@ -15,6 +15,7 @@ export interface Props {
   icon?: React.ReactNode; 
   showHeader?: boolean; 
   showDetailPanel?: boolean;
+  display?: TimelineDisplay; 
   onClick?: (id: string) => void; 
   onMouseEnter?: (id: string) => void,
   onMouseLeave?: (id: string) => void,
@@ -29,6 +30,7 @@ const Timeline = ({
   icon,
   showHeader = true, 
   showDetailPanel = true,
+  display = 'normal',
   onClick, 
   onMouseEnter, 
   onMouseLeave
@@ -93,6 +95,7 @@ const Timeline = ({
                 date={event.date}
                 icon={getIcon(event)}
                 active={eventId === event.id}
+                display={display}
                 onClick={onTimelineEventClick}
                 onMouseEnter={onTimelineEventMouseEnter}
                 onMouseLeave={onTimelineEventMouseLeave}

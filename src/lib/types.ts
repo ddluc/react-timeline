@@ -1,5 +1,7 @@
 import React from 'react'; 
 
+export type TimelineDisplay = 'normal' | 'condensed'; 
+
 export interface ITimelineEvent { 
   id: string;  
   title: string; 
