@@ -4,7 +4,7 @@ export interface ThemedProps  {
   theme: Theme;
 }
 
-export const Container = styled.div` 
+export const Container = styled.li` 
   display: flex; 
   flex-direction: row; 
   justify-content: flex-start;

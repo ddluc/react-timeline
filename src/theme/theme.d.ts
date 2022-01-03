@@ -24,6 +24,12 @@ declare module 'styled-components' {
         top: string; 
         bottom: string; 
       }
+      point: { 
+        spacing: {
+          top: string; 
+          bottom: string; 
+        }
+      }
     }; 
     header: {
       color: string; 

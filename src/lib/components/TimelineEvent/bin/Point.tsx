@@ -9,7 +9,9 @@ export interface ThemedProps extends ContainerProps {
 }
 
 export const Point = styled.div`
-  margin: 0px; 
+  display: flex;
+  padding-top: ${ ({ theme }: ThemedProps ) => theme.timeline.point.spacing.top };
+  padding-bottom: ${ ({ theme }: ThemedProps ) => theme.timeline.point.spacing.bottom };
   > svg {
     fill: ${ ({ theme } : ThemedProps) => theme.timeline.color }
   }

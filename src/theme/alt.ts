@@ -16,6 +16,12 @@ export const theme: Theme = {
     spacing: {
       top: '10px', 
       bottom: '15px'
+    }, 
+    point: {
+      spacing: {
+        top: '0px', 
+        bottom: '2px'
+      }
     }
   }, 
   header: { 
