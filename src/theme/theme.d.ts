@@ -20,6 +20,10 @@ declare module 'styled-components' {
     }; 
     timeline: {
       color: string; 
+      spacing: {
+        top: string; 
+        bottom: string; 
+      }
     }; 
     header: {
       color: string; 
@@ -35,6 +39,10 @@ declare module 'styled-components' {
         }
       }; 
       shadow: string; 
+      spacing: {
+        top: string; 
+        bottom: string; 
+      }
     }; 
     panel: { 
       colors: { 

@@ -9,10 +9,14 @@ export const theme: Theme = {
   },
   border: { 
     color: '#1E526B', 
-    radius: '12px'
+    radius: '0px'
   },
   timeline: {
-    color: '#2D7CA1'
+    color: '#2D7CA1',
+    spacing: {
+      top: '10px', 
+      bottom: '15px'
+    }
   }, 
   header: { 
     color: '#E6E6E6'
@@ -28,6 +32,10 @@ export const theme: Theme = {
       }
     },
     shadow: '2px 2px 4px 0px rgba(0,0,0, 0.2)',
+    spacing: {
+      top: '0px', 
+      bottom: '0px'
+    }
   }, 
   panel: { 
     colors: { 

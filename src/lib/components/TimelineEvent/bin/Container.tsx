@@ -9,5 +9,6 @@ export const Container = styled.div`
   flex-direction: row; 
   justify-content: flex-start;
   position: relative;
-  margin: 10px 0px 0px 0px;  
+  margin-top: ${ ({ theme }: ThemedProps ) => theme.timeline.spacing.top};
+  margin-bottom: ${ ({ theme }: ThemedProps ) => theme.timeline.spacing.bottom };
 `; 

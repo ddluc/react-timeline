@@ -12,7 +12,11 @@ export const theme: Theme = {
     radius: '4px'
   },
   timeline: {
-    color: '#A3ACB9'
+    color: '#A3ACB9', 
+    spacing: {
+      top: '10px', 
+      bottom: '10px'
+    }
   }, 
   header: { 
     color: '#313C4C'
@@ -28,6 +32,10 @@ export const theme: Theme = {
       }
     },
     shadow: '2px 2px 4px 0px rgba(0,0,0, 0.2)',
+    spacing: {
+      top: '10px', 
+      bottom: '15px'
+    }
   }, 
   panel: { 
     colors: { 
