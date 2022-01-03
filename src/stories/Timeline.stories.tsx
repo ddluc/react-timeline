@@ -4,7 +4,7 @@ import ReactTimeline, {
   Props as ReactTimelineProps, 
   TimelineTheme, 
 } from '../index'; 
-import { getMockEvents } from '../lib/mocks';
+import { getMockEvents } from './mocks';
 import TimelinePointAltIcon from '../assets/svg/timeline-point-alt.svg';
 
 
