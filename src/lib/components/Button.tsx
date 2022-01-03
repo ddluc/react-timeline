@@ -36,7 +36,7 @@ export const Button = styled.button<StyledProps>`
     ({ theme, backgroundColor }: ThemedProps) => backgroundColor ? backgroundColor : theme.card.colors.accent 
   }; 
   color: ${ 
-    ({ theme, color }: ThemedProps ) => color ? color : '#FFFFFF' 
+    ({ color }: ThemedProps ) => color ? color : '#FFFFFF' 
   }; 
   outline: none; 
   border: none; 

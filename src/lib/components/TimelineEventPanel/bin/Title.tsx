@@ -11,5 +11,5 @@ export const Title = styled.h3`
   font-weight: bold;
   font-family: ${({ theme }: ThemedProps ) => theme.fonts.main }; 
   color: ${({ theme }: ThemedProps ) => theme.panel.colors.title }; 
-  margin: 20px 0px 10px 0px; 
+  margin: 20px 0px 0px 0px; 
 `; 

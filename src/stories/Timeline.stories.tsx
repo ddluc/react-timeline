@@ -3,6 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ReactTimeline, Props as ReactTimelineProps } from '../lib/index'; 
 import { getMockEvents } from '../lib/mocks';
 import { theme as DEFAULT_THEME } from '../theme/default';
+import { theme as ALT_THEME } from '../theme/alt';
 
 const MOCK_EVENTS = getMockEvents(); 
 
@@ -25,3 +26,9 @@ export default {
 const Template: ComponentStory<typeof ReactTimeline> = (args: ReactTimelineProps) => (<ReactTimeline {...args} />); 
 
 export const Default = Template.bind({});
+
+export const Alternate = Template.bind({})
+
+Alternate.args = { 
+  theme: ALT_THEME
+}; 

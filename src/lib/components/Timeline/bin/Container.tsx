@@ -6,4 +6,6 @@ export interface ThemedProps extends Props {
   theme: Theme;
 }
 
-export const Container = styled.div<Props>``;
+export const Container = styled.div<Props>`
+  background-color: ${({ theme }: ThemedProps ) => theme.background }; 
+`;

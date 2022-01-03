@@ -11,4 +11,5 @@ export const Content = styled.div`
   font-size: 14px; 
   font-weight: normal;
   line-height: 20px; 
+  color: ${({ theme }: ThemedProps ) => theme.panel.colors.content }; 
 `; 
