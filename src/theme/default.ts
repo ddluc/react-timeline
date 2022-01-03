@@ -19,11 +19,13 @@ export const theme: Theme = {
   },
   card: {
     colors: {
-      title: '#5F646A', 
-      description: '#5F646A', 
-      date: '#5F646A', 
-      accent: '#69B56A',
-      background: '#FFFFFF'
+      text: '#5F646A', 
+      background: '#FFFFFF',
+      active: { 
+        border: '#69B56A',
+        background: '#FFFFFF',
+        text: '#5F646A', 
+      }
     },
     shadow: '2px 2px 4px 0px rgba(0,0,0, 0.2)',
   }, 

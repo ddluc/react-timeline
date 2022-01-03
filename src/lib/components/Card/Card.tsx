@@ -18,10 +18,12 @@ const Card = styled.button<Props>`
   cursor: pointer; 
   flex-direction: column; 
   justify-content: space-between;
-  background-color: ${ ({ theme, backgroundColor }: ThemedProps ) => backgroundColor || theme.card.colors.background }; 
+  background-color: ${ ({ theme, active, backgroundColor }: ThemedProps ) => 
+    (active ? backgroundColor || theme.card.colors.active.background : theme.card.colors.background ) 
+  }; 
   border: solid 1px; 
   border-color: ${ ({ theme, active, color }: ThemedProps ) => 
-    (active ? color || theme.card.colors.accent : theme.border.color ) 
+    (active ? color || theme.card.colors.active.border : theme.border.color ) 
   };
   border-radius: ${ ({ theme }: ThemedProps ) => theme.border.radius };
   /* offset-x | offset-y | blur-radius | spread-radius | color */

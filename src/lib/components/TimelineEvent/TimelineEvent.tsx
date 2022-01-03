@@ -39,13 +39,13 @@ const TimelineEvent = ({
         onMouseEnter={() => onMouseEnter(id)}
         onMouseLeave={() => onMouseLeave(id)}
       >
-        <CardTitle>
+        <CardTitle active={active}>
           <h3>{title}</h3>
         </CardTitle>
-        <CardDescription>
+        <CardDescription active={active}>
           <p>{description}</p>
-        </CardDescription>
-        <CardDate>
+        </CardDescription >
+        <CardDate active={active}>
           <span>
             {date.toLocaleDateString()} {date.toLocaleTimeString()}
           </span>

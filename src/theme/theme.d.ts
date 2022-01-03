@@ -26,11 +26,13 @@ declare module 'styled-components' {
     }
     card: { 
       colors: {
-        title: string; 
-        description: string; 
-        date: string; 
+        text: string; 
         background: string; 
-        accent: string; 
+        active: { 
+          border: string, 
+          background: string; 
+          text: string;
+        }
       }; 
       shadow: string; 
     }; 
