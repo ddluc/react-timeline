@@ -12,6 +12,7 @@ export interface Props {
   title?: string; 
   height?: number; 
   width?: number;
+  icon?: React.ReactNode; 
   showHeader?: boolean; 
   showDetailPanel?: boolean;
   onClick?: (id: string) => void; 
@@ -25,6 +26,7 @@ const Timeline = ({
   title = 'React Timeline',
   height = 800,
   width, 
+  icon,
   showHeader = true, 
   showDetailPanel = true,
   onClick, 
@@ -65,6 +67,12 @@ const Timeline = ({
     return events.find((event: ITimelineEvent) => event.id === id); 
   }; 
 
+  const getIcon = (event: ITimelineEvent): React.ReactNode | null => {
+    if (event.icon) return event.icon; 
+    if (icon) return icon; 
+    return null; 
+  }
+
   // Fail-safe in case no events are provided to the timeline 
   if (!events) { 
     return <div><p>No Events To Display</p></div>; 
@@ -83,6 +91,7 @@ const Timeline = ({
                 title={event.title}
                 description={event.description}
                 date={event.date}
+                icon={getIcon(event)}
                 active={eventId === event.id}
                 onClick={onTimelineEventClick}
                 onMouseEnter={onTimelineEventMouseEnter}

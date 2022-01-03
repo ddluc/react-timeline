@@ -33,7 +33,7 @@ export const Button = styled.button<StyledProps>`
   size: ${ (props) => setMinWidth(props.size)}; 
   padding: ${(props) => setPadding(props.size)};
   background-color: ${ 
-    ({ theme, backgroundColor }: ThemedProps) => backgroundColor ? backgroundColor : theme.card.colors.accent 
+    ({ theme, backgroundColor }: ThemedProps) => backgroundColor ? backgroundColor : theme.card.colors.active 
   }; 
   color: ${ 
     ({ color }: ThemedProps ) => color ? color : '#FFFFFF' 

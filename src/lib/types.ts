@@ -5,6 +5,7 @@ export interface ITimelineEvent {
   title: string; 
   date: Date,
   description?: string; 
-  content: () => Promise<React.ReactNode>; 
   active?: false; 
+  icon?: React.ReactNode
+  content: () => Promise<React.ReactNode>; 
 }

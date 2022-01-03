@@ -1,7 +1,7 @@
 import React from 'react'; 
-import TimelinePoint from '../../../assets/svg/timeline-point.svg';
-import { Container } from './bin';
+import TimelinePointSVG from '../../../assets/svg/timeline-point.svg';
 import { Card, CardTitle, CardDescription, CardDate } from '../Card'; 
+import { Container, Point, Icon } from './bin';
 
 export interface Props { 
   id: string;
@@ -11,6 +11,7 @@ export interface Props {
   active?: boolean;
   color?: string;
   backgroundColor?: string;
+  icon?: React.ReactNode; 
   onClick?: (id: string, ) => void;
   onMouseEnter?: (id: string) => void;
   onMouseLeave?: (id: string) => void;
@@ -23,6 +24,7 @@ const TimelineEvent = ({
   description = '', 
   active = false, 
   color, 
+  icon,
   backgroundColor,
   onClick, 
   onMouseEnter, 
@@ -30,7 +32,10 @@ const TimelineEvent = ({
 }: Props): JSX.Element => {
 
   return (
-    <Container icon={TimelinePoint}>
+    <Container>
+      <Point>
+        { icon  || <Icon src={TimelinePointSVG} alt="Timeline Point" />}
+      </Point>
       <Card 
         color={color} 
         backgroundColor={backgroundColor} 

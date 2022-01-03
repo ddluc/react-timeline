@@ -16,6 +16,7 @@ export interface Props {
   width?: number; 
   showHeader?: boolean; 
   showDetailPanel?: boolean;
+  icon?: React.ReactNode; 
   theme?: Theme; 
 }
 
@@ -26,6 +27,7 @@ export const ReactTimeline = ({
   width, 
   showHeader, 
   showDetailPanel,
+  icon,
   theme = DEFAULT_THEME
 }: Props): JSX.Element => {
 
@@ -43,6 +45,7 @@ export const ReactTimeline = ({
         showDetailPanel={showDetailPanel}
         height={height}
         width={width}
+        icon={icon}
       />
     </ThemeProvider>
   ); 
