@@ -7,6 +7,13 @@ const webpackCommon = require('./webpack.common');
 module.exports = {
   ...webpackCommon,
   mode: "production",
+  output: {
+    filename: 'index.js',
+    path: path.resolve(__dirname, '../dist'),
+    library: 'react-timeline', 
+    libraryTarget: 'umd',
+    globalObject: 'this'
+  },
   plugins: [
     new CleanWebpackPlugin({
       protectWebpackAssets: false,

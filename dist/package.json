@@ -1,10 +1,9 @@
 {
   "name": "react-timeline",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A simple configurable react timeline component",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --config config/webpack.dev.js",
     "build": "webpack --config config/webpack.prod.js; ./scripts/postbuild.sh",
     "storybook": "start-storybook -p 6006",
