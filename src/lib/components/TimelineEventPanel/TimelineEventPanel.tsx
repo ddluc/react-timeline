@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Title, SubTitle, Content, Skeleton } from './bin';
 import { useContentCache } from '../../hooks/useContentCache';
 
-import { ITimelineEvent, SkeletonProps, DateRange } from '../../types';
+import { ITimelineEvent, SkeletonProps, isSkeletonProps, DateRange } from '../../types';
 import { renderDate } from '../../util';
 
 export interface Props {
@@ -12,7 +12,7 @@ export interface Props {
 
 const TimelineEventPanel = (props: Props | SkeletonProps): JSX.Element => {
 
-  if ('skeleton' in props) {
+  if (isSkeletonProps(props)) {
     return <Skeleton />
   }
   const { event, customDateRenderer } = props; 

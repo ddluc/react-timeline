@@ -4,7 +4,7 @@ import { TimelineHeader } from '../TimelineHeader';
 import { TimelineEventPanel } from '../TimelineEventPanel';
 import { Container, LeftPanel, RightPanel, MainPanel, Skeleton } from './bin';
 
-import { ITimelineEvent, TimelineDisplay, DateRange } from "../../types";
+import { ITimelineEvent, TimelineDisplay, DateRange, isSkeletonProps } from "../../types";
 
 export interface Props { 
   events: ITimelineEvent[]
@@ -31,7 +31,7 @@ export interface SkeletonProps {
 
 const Timeline = (props: Props | SkeletonProps): JSX.Element => { 
 
-  if ('skeleton' in props) {
+  if (isSkeletonProps(props)) {
     return <Skeleton showDetailPanel={props.showDetailPanel} height={props.hieght} width={props.width} />
   }
 

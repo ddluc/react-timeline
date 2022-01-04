@@ -1,6 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { TimelineEvent, Props as TimelineEventProps } from '../lib/components/TimelineEvent';
+import { DateRange, isDateRange } from '../lib/types'; 
 
 export default {
   title: 'TimelineEvent',
@@ -23,9 +24,8 @@ export default {
   } as TimelineEventProps
 } as ComponentMeta<typeof TimelineEvent>;
 
-
-const getDateString = (date: Date | string | number ): Date => {
-  if (date instanceof Date) {
+const getDateString = (date: Date | DateRange | string | number ): Date | DateRange => {
+  if (date instanceof Date || isDateRange(date)) {
     return date; 
   }
   return new Date(date); 

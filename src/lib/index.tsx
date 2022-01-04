@@ -5,6 +5,7 @@ import GlobalFonts from '../theme/fonts';
 import { theme as DEFAULT_THEME } from '../theme/default';
 
 import { logBuild } from './util';
+import { isSkeletonProps } from './types';
 
 import { 
   Timeline, 
@@ -18,7 +19,7 @@ export interface Props extends TimelineProps {
 
 export const ReactTimeline = (props: Props | TimelineSkeletonProps): JSX.Element => {
 
-  if ('skeleton' in props) {
+  if (isSkeletonProps(props)) {
     return <Timeline skeleton {...props} />
   }
 

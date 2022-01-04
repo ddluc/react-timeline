@@ -7,6 +7,10 @@ export type DateRange = {
   end: Date | 'present'; 
 }; 
 
+export const isDateRange = (date: any): date is DateRange => {
+  return 'start' in date;
+};
+
 export interface ITimelineEvent { 
   id: string;  
   title: string; 
@@ -20,5 +24,11 @@ export interface ITimelineEvent {
 export type SkeletonProps = { 
   skeleton: boolean; 
 }; 
+
+export const isSkeletonProps = (props: any): props is SkeletonProps => {
+  return 'skeleton' in props;
+};
+
+
 
 

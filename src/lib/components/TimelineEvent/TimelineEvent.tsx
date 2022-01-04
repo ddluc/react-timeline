@@ -1,6 +1,6 @@
 import React from 'react'; 
 import TimelinePointSVG from '../../../assets/svg/timeline-point.svg';
-import { TimelineDisplay, DateRange, SkeletonProps } from '../../types';
+import { TimelineDisplay, DateRange, SkeletonProps, isSkeletonProps } from '../../types';
 import { renderDate } from '../../util';
 import { Card, CardTitle, CardDescription, CardDate } from '../Card'; 
 import { Container, Point, Line, Separator, Condensed, Skeleton } from './bin';
@@ -23,7 +23,7 @@ export type Props = {
 
 const TimelineEvent = (props : Props ): JSX.Element => {
 
-  if ('skeleton' in props) {
+  if (isSkeletonProps(props)) {
     return <Skeleton />
   }
 
