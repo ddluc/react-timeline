@@ -13,19 +13,25 @@ const getContent = (): Promise<React.ReactNode> => (
   })
 ); 
 
-export const getMockEvents = (
-  num: number = NUM_EVENTS, 
-  customIcon: boolean = false, 
-  asDateRange: boolean = false
-): ITimelineEvent[] => {
+interface getMockEventArgs { 
+  num?: number, 
+  customIcon?: boolean, 
+  asDateRange?: boolean, 
+}
+
+export const getMockEvents = ({
+  num = NUM_EVENTS, 
+  customIcon = false, 
+  asDateRange = false, 
+}: getMockEventArgs): ITimelineEvent[] => {
   let events: ITimelineEvent[] = []; 
   let i = 0; 
   do {
     let date: Date | DateRange = faker.date.recent();
     if (asDateRange) { 
       date = { 
-        start: faker.date.recent(),
-        end: faker.date.recent()
+        start: faker.date.past(),
+        end: i === 0 ? 'present' : faker.date.recent()
       }; 
     }
     events.push({

@@ -2,11 +2,12 @@ import React from 'react';
 import { Container, Title, SubTitle, Content, Skeleton } from './bin';
 import { useContentCache } from '../../hooks/useContentCache';
 
-import { ITimelineEvent, SkeletonProps } from '../../types';
+import { ITimelineEvent, SkeletonProps, DateRange } from '../../types';
 import { renderDate } from '../../util';
 
 export interface Props {
-  event: ITimelineEvent
+  event: ITimelineEvent; 
+  customDateRenderer?: (date: Date | DateRange) => string; 
 }
 
 const TimelineEventPanel = (props: Props | SkeletonProps): JSX.Element => {
@@ -14,7 +15,7 @@ const TimelineEventPanel = (props: Props | SkeletonProps): JSX.Element => {
   if ('skeleton' in props) {
     return <Skeleton />
   }
-  const { event } = props; 
+  const { event, customDateRenderer } = props; 
 
   const [content, setContent ] = React.useState<React.ReactNode | null>(null); 
   
@@ -43,7 +44,7 @@ const TimelineEventPanel = (props: Props | SkeletonProps): JSX.Element => {
     <Container>
       <Title>{event.title}</Title>
       <SubTitle>
-        { renderDate(event.date) }
+          { customDateRenderer ? customDateRenderer(event.date) : renderDate(event.date) }
       </SubTitle>
       <Content>
         { content }

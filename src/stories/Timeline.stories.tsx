@@ -4,9 +4,25 @@ import ReactTimeline, {
   Props as ReactTimelineProps, 
   TimelineTheme, 
 } from '../index'; 
+import { DateRange } from '../lib/types'; 
 import { getMockEvents } from './mocks';
 import TimelinePointAltIcon from '../assets/svg/timeline-point-alt.svg';
 
+const renderDate = (date: Date | DateRange): string => { 
+  const months = ["JAN", "FEB", "MAR", "APR", "MAY", "JUNE", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
+  if (date instanceof Date) {
+    return `${months[date.getMonth()]} ${date.getDate()} ${date.getFullYear()}`; 
+  } else {
+    let start = `${months[date.start.getMonth()]} ${date.start.getDate()} ${date.start.getFullYear()}`; 
+    let end; 
+    if ( date.end === 'present' ) { 
+      end = 'PRESENT'; 
+    } else { 
+      end = `${months[date.end.getMonth()]} ${date.end.getDate()} ${date.end.getFullYear()}`;
+    }
+    return  `${start} - ${end}`; 
+  }
+}; 
 
 export default {
   title: 'React Timeline',
@@ -20,7 +36,7 @@ export default {
     showHeader: false, 
     showDetailPanel: false,
     theme: TimelineTheme.default,
-    events: getMockEvents(),
+    events: getMockEvents({ num: 10 }),
   } as ReactTimelineProps
 } as ComponentMeta<typeof ReactTimeline>;
 
@@ -36,7 +52,7 @@ export const Condensed = Template.bind({});
 Condensed.args = { 
   theme: TimelineTheme.condensed,
   display: 'condensed',
-  events: getMockEvents()
+  events: getMockEvents({ num: 10 })
 }; 
 
 // 3. With Detail Panel
@@ -47,8 +63,8 @@ WithDetailPanel.args = {
 }; 
 
 // 4. Dark (With Custom Icon)
-export const Dark = Template.bind({})
-Dark.args = { 
+export const WithCustomTheme = Template.bind({})
+WithCustomTheme.args = { 
   theme: TimelineTheme.dark,
   icon: <TimelinePointAltIcon />
 }; 
@@ -73,7 +89,7 @@ WithCustomIcons.args = {
     }, 
   },
   display: 'condensed',
-  events: getMockEvents(10, true)
+  events: getMockEvents({ num: 10, customIcon: true})
 }; 
 
 
@@ -86,7 +102,15 @@ Skeleton.args = {
 // 7. With Date Ranges
 export const WithDateRanges = Template.bind({})
 WithDateRanges.args = { 
-  events: getMockEvents(10, false, true)
+  events: getMockEvents({ num: 10, asDateRange: true })
+}; 
+
+
+// 7. With Custom Date Renderer
+export const WithCustomDateRenderer = Template.bind({})
+WithCustomDateRenderer.args = { 
+  events: getMockEvents({ num: 10, asDateRange: true }),
+  customDateRenderer: renderDate
 }; 
 
 

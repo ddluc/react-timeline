@@ -15,6 +15,7 @@ export type Props = {
   backgroundColor?: string;
   icon?: React.ReactNode; 
   display: TimelineDisplay; 
+  customDateRenderer?: (date: Date | DateRange) => string; 
   onClick?: (id: string) => void;
   onMouseEnter?: (id: string) => void;
   onMouseLeave?: (id: string) => void;
@@ -36,6 +37,7 @@ const TimelineEvent = (props : Props ): JSX.Element => {
     icon,
     backgroundColor,
     display,
+    customDateRenderer,
     onClick, 
     onMouseEnter, 
     onMouseLeave,
@@ -67,7 +69,7 @@ const TimelineEvent = (props : Props ): JSX.Element => {
             </CardDescription >
             <CardDate active={active}>
               <span>
-                { renderDate(date) }
+                { customDateRenderer ? customDateRenderer(date) : renderDate(date) }
               </span>
             </CardDate>
           </Card>
@@ -79,7 +81,7 @@ const TimelineEvent = (props : Props ): JSX.Element => {
           <Condensed>
             <h3>{title}</h3>
             <span>
-              { renderDate(date) }
+            { customDateRenderer ? customDateRenderer(date) : renderDate(date) }
             </span>
           </Condensed>
         )

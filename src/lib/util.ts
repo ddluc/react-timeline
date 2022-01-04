@@ -8,6 +8,13 @@ export const renderDate = (date: Date | DateRange): string => {
   if (date instanceof Date) {
     return `${date.toLocaleDateString()} ${date.toLocaleTimeString()}`; 
   } else {
-    return `${date.start.toLocaleDateString()} - ${date.end.toLocaleDateString()}`;
+    let start = date.start.toLocaleDateString(); 
+    let end; 
+    if (date.end === 'present') {
+      end = 'Present'; 
+    } else { 
+      end = date.end.toLocaleDateString(); 
+    }
+    return `${start} - ${end}`; 
   }
 }; 

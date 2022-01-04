@@ -4,7 +4,7 @@ import { TimelineHeader } from '../TimelineHeader';
 import { TimelineEventPanel } from '../TimelineEventPanel';
 import { Container, LeftPanel, RightPanel, MainPanel, Skeleton } from './bin';
 
-import { ITimelineEvent, TimelineDisplay } from "../../types";
+import { ITimelineEvent, TimelineDisplay, DateRange } from "../../types";
 
 export interface Props { 
   events: ITimelineEvent[]
@@ -16,6 +16,7 @@ export interface Props {
   showHeader?: boolean; 
   showDetailPanel?: boolean;
   display?: TimelineDisplay; 
+  customDateRenderer?: (date: Date | DateRange) => string; 
   onClick?: (id: string) => void; 
   onMouseEnter?: (id: string) => void,
   onMouseLeave?: (id: string) => void,
@@ -44,6 +45,7 @@ const Timeline = (props: Props | SkeletonProps): JSX.Element => {
     showHeader = true, 
     showDetailPanel = true,
     display = 'normal',
+    customDateRenderer, 
     onClick, 
     onMouseEnter, 
     onMouseLeave
@@ -109,6 +111,7 @@ const Timeline = (props: Props | SkeletonProps): JSX.Element => {
                 icon={getIcon(event)}
                 active={eventId === event.id}
                 display={display}
+                customDateRenderer={customDateRenderer}
                 onClick={onTimelineEventClick}
                 onMouseEnter={onTimelineEventMouseEnter}
                 onMouseLeave={onTimelineEventMouseLeave}
@@ -118,7 +121,7 @@ const Timeline = (props: Props | SkeletonProps): JSX.Element => {
         </LeftPanel>
         { showDetailPanel && (
           <RightPanel>
-            <TimelineEventPanel event={getActiveEvent(eventId)} />
+            <TimelineEventPanel event={getActiveEvent(eventId)} customDateRenderer={customDateRenderer} />
           </RightPanel>  
         )}
       </MainPanel>

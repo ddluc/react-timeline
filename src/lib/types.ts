@@ -4,7 +4,7 @@ export type TimelineDisplay = 'normal' | 'condensed';
 
 export type DateRange = { 
   start: Date; 
-  end: Date; 
+  end: Date | 'present'; 
 }; 
 
 export interface ITimelineEvent { 
