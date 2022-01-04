@@ -14,6 +14,11 @@ module.exports = {
     libraryTarget: 'umd',
     globalObject: 'this'
   },
+  externals: {
+    'react': 'react', 
+    'react-dom' : 'reactDOM', 
+    'styled-components': 'styled-components'
+  },
   plugins: [
     new CleanWebpackPlugin({
       protectWebpackAssets: false,
