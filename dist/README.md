@@ -2,7 +2,7 @@
 
 A simple and customizable timeline component for react apps with additional dependencies written in Typescript. 
 
-See the **[Live Demo](https://ddluc.github.io/react-timeline/?path=/story/timeline--default)**
+See the **[Live Demo](https://ddluc.github.io/react-timeline/?path=/story/react-timeline--default)**
 
 ### Installation 
 
