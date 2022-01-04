@@ -1,4 +1,4 @@
-import React from 'React'; 
+import React from 'react';
 import faker from 'faker'; 
 import { DateRange, ITimelineEvent } from '../../lib/types';
 import { getCustomIcon } from './icons'; 
