@@ -77,10 +77,16 @@ WithCustomIcons.args = {
 }; 
 
 
-// 4. Dark (With Custom Icon)
+// 6. As a skeleton
 export const Skeleton = Template.bind({})
 Skeleton.args = { 
   skeleton: true
+}; 
+
+// 7. With Date Ranges
+export const WithDateRanges = Template.bind({})
+WithDateRanges.args = { 
+  events: getMockEvents(10, false, true)
 }; 
 
 

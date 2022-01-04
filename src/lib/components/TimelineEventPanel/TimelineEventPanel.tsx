@@ -3,6 +3,7 @@ import { Container, Title, SubTitle, Content, Skeleton } from './bin';
 import { useContentCache } from '../../hooks/useContentCache';
 
 import { ITimelineEvent, SkeletonProps } from '../../types';
+import { renderDate } from '../../util';
 
 export interface Props {
   event: ITimelineEvent
@@ -41,7 +42,9 @@ const TimelineEventPanel = (props: Props | SkeletonProps): JSX.Element => {
   return (
     <Container>
       <Title>{event.title}</Title>
-      <SubTitle>{event.date.toLocaleDateString()} {event.date.toLocaleTimeString()}</SubTitle>
+      <SubTitle>
+        { renderDate(event.date) }
+      </SubTitle>
       <Content>
         { content }
       </Content>

@@ -1,13 +1,14 @@
 import React from 'react'; 
 import TimelinePointSVG from '../../../assets/svg/timeline-point.svg';
-import { TimelineDisplay, SkeletonProps } from '../../types';
+import { TimelineDisplay, DateRange, SkeletonProps } from '../../types';
+import { renderDate } from '../../util';
 import { Card, CardTitle, CardDescription, CardDate } from '../Card'; 
 import { Container, Point, Line, Separator, Condensed, Skeleton } from './bin';
 
 export type Props = { 
   id: string;
   title: string; 
-  date: Date;
+  date: Date | DateRange;
   description?: string; 
   active?: boolean;
   color?: string;
@@ -38,7 +39,7 @@ const TimelineEvent = (props : Props ): JSX.Element => {
     onClick, 
     onMouseEnter, 
     onMouseLeave,
-  } = props
+  } = props; 
 
   return (
     <Container display={display}>
@@ -66,7 +67,7 @@ const TimelineEvent = (props : Props ): JSX.Element => {
             </CardDescription >
             <CardDate active={active}>
               <span>
-                {date.toLocaleDateString()} {date.toLocaleTimeString()}
+                { renderDate(date) }
               </span>
             </CardDate>
           </Card>
@@ -78,7 +79,7 @@ const TimelineEvent = (props : Props ): JSX.Element => {
           <Condensed>
             <h3>{title}</h3>
             <span>
-              {date.toLocaleDateString()} {date.toLocaleTimeString()}
+              { renderDate(date) }
             </span>
           </Condensed>
         )
