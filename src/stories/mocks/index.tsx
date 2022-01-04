@@ -1,6 +1,6 @@
 import React from 'React'; 
 import faker from 'faker'; 
-import { ITimelineEvent } from '../types';
+import { ITimelineEvent } from '../../lib/types';
 import { getCustomIcon } from './icons'; 
 
 
@@ -10,7 +10,7 @@ const getContent = (): Promise<React.ReactNode> => (
   new Promise((resolve): void => {
     setTimeout(() => {
       resolve(faker.lorem.paragraphs(2)); 
-    }, 500);
+    }, 1200);
   })
 ); 
 
