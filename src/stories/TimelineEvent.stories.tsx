@@ -32,7 +32,15 @@ const getDateString = (date: Date | string | number ): Date => {
 }
 
 const Template: ComponentStory<typeof TimelineEvent> = (args: TimelineEventProps) => {
+  if ('skeleton' in args)  {
+    return (<TimelineEvent skeleton />);  
+  }
   return (<TimelineEvent {...args} date={getDateString(args.date)} />);
 };
 
 export const Default = Template.bind({});
+
+export const Skeleton = Template.bind({});
+Skeleton.args = { 
+  skeleton: true
+}; 

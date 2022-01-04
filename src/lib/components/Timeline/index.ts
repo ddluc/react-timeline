@@ -3,3 +3,4 @@ export { default as Timeline } from './Timeline';
 
 // Export prop types
 export type { Props } from './Timeline';
+export type { SkeletonProps } from './Timeline';

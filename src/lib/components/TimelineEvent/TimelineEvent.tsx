@@ -1,10 +1,10 @@
 import React from 'react'; 
 import TimelinePointSVG from '../../../assets/svg/timeline-point.svg';
-import { TimelineDisplay } from '../../types';
+import { TimelineDisplay, SkeletonProps } from '../../types';
 import { Card, CardTitle, CardDescription, CardDate } from '../Card'; 
-import { Container, Point, Line, Separator, Condensed } from './bin';
+import { Container, Point, Line, Separator, Condensed, Skeleton } from './bin';
 
-export interface Props { 
+export type Props = { 
   id: string;
   title: string; 
   date: Date;
@@ -14,25 +14,32 @@ export interface Props {
   backgroundColor?: string;
   icon?: React.ReactNode; 
   display: TimelineDisplay; 
-  onClick?: (id: string, ) => void;
+  onClick?: (id: string) => void;
   onMouseEnter?: (id: string) => void;
   onMouseLeave?: (id: string) => void;
-}; 
+} | SkeletonProps; 
 
-const TimelineEvent = ({ 
-  id,
-  title, 
-  date, 
-  description = '', 
-  active = false, 
-  color, 
-  icon,
-  backgroundColor,
-  display,
-  onClick, 
-  onMouseEnter, 
-  onMouseLeave,
-}: Props): JSX.Element => {
+const TimelineEvent = (props : Props ): JSX.Element => {
+
+  if ('skeleton' in props) {
+    return <Skeleton />
+  }
+
+  const {
+    id,
+    title, 
+    date, 
+    description = '', 
+    active = false, 
+    color, 
+    icon,
+    backgroundColor,
+    display,
+    onClick, 
+    onMouseEnter, 
+    onMouseLeave,
+  } = props
+
   return (
     <Container display={display}>
       <Separator data-name="separator">

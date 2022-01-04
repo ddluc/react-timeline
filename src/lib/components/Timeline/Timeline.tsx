@@ -2,7 +2,7 @@ import React from 'react';
 import { TimelineEvent } from "../TimelineEvent";
 import { TimelineHeader } from '../TimelineHeader';
 import { TimelineEventPanel } from '../TimelineEventPanel';
-import { Container, LeftPanel, RightPanel, MainPanel } from './bin';
+import { Container, LeftPanel, RightPanel, MainPanel, Skeleton } from './bin';
 
 import { ITimelineEvent, TimelineDisplay } from "../../types";
 
@@ -21,20 +21,33 @@ export interface Props {
   onMouseLeave?: (id: string) => void,
 }; 
 
-const Timeline = ({ 
-  events, 
-  activeEventId, 
-  title = 'React Timeline',
-  height = 800,
-  width, 
-  icon,
-  showHeader = true, 
-  showDetailPanel = true,
-  display = 'normal',
-  onClick, 
-  onMouseEnter, 
-  onMouseLeave
-}: Props): JSX.Element => { 
+export interface SkeletonProps { 
+  skeleton: boolean; 
+  showDetailPanel: boolean;
+  hieght: number; 
+  width: number; 
+}
+
+const Timeline = (props: Props | SkeletonProps): JSX.Element => { 
+
+  if ('skeleton' in props) {
+    return <Skeleton showDetailPanel={props.showDetailPanel} height={props.hieght} width={props.width} />
+  }
+
+  const { 
+    events, 
+    activeEventId, 
+    title = 'React Timeline',
+    height = 800,
+    width, 
+    icon,
+    showHeader = true, 
+    showDetailPanel = true,
+    display = 'normal',
+    onClick, 
+    onMouseEnter, 
+    onMouseLeave
+  } = props; 
 
   const getInitialEvent = (): string  => { 
     if (!events) return ''; 
@@ -77,7 +90,7 @@ const Timeline = ({
 
   // Fail-safe in case no events are provided to the timeline 
   if (!events) { 
-    return <div><p>No Events To Display</p></div>; 
+    return <Skeleton />
   }
 
   return (

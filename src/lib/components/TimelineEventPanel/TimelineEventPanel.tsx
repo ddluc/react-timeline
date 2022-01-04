@@ -2,13 +2,18 @@ import React from 'react';
 import { Container, Title, SubTitle, Content, Skeleton } from './bin';
 import { useContentCache } from '../../hooks/useContentCache';
 
-import { ITimelineEvent } from '../../types';
+import { ITimelineEvent, SkeletonProps } from '../../types';
 
 export interface Props {
   event: ITimelineEvent
 }
 
-const TimelineEventPanel = ({ event }: Props): JSX.Element => {
+const TimelineEventPanel = (props: Props | SkeletonProps): JSX.Element => {
+
+  if ('skeleton' in props) {
+    return <Skeleton />
+  }
+  const { event } = props; 
 
   const [content, setContent ] = React.useState<React.ReactNode | null>(null); 
   

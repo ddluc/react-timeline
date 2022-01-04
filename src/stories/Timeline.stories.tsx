@@ -77,3 +77,10 @@ WithCustomIcons.args = {
 }; 
 
 
+// 4. Dark (With Custom Icon)
+export const Skeleton = Template.bind({})
+Skeleton.args = { 
+  skeleton: true
+}; 
+
+

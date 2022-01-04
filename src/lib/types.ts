@@ -11,3 +11,9 @@ export interface ITimelineEvent {
   icon?: React.ReactNode
   content: () => Promise<React.ReactNode>; 
 }
+
+export type SkeletonProps = { 
+  skeleton: boolean; 
+}; 
+
+
