@@ -63,21 +63,18 @@ const Timeline = (props: Props | SkeletonProps): JSX.Element => {
   const [ eventId, setEventId] = React.useState<string>(initialEvent); 
 
   const onTimelineEventClick = (id: string): void => {
-    if (activeEventId && onClick) { 
-      onClick(id); 
-    } else {
+    if (onClick) onClick(id); 
+    if (!activeEventId) {
       setEventId(id); 
     }
   }; 
 
   const onTimelineEventMouseEnter = (id: string) => {
-    if (activeEventId && onMouseEnter) { 
-      onMouseEnter(id); 
-    }
+    if (onMouseEnter) onMouseEnter(id); 
   }; 
 
   const onTimelineEventMouseLeave = (id: string): void => {
-    if (activeEventId && onMouseLeave) onMouseLeave(id); 
+    if (onMouseLeave) onMouseLeave(id); 
   }
 
   const getActiveEvent = (id: string): ITimelineEvent => { 
