@@ -51,7 +51,7 @@ module.exports = {
     extensions: ['.tsx', '.ts', '.js'],
   },
   output: {
-    filename: 'bundle.[fullhash].js',
+    filename: 'index.js',
     path: path.resolve(__dirname, '../dist'),
   },
   plugins: [
