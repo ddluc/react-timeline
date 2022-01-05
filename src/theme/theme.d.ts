@@ -49,6 +49,7 @@ declare module 'styled-components' {
         top: string; 
         bottom: string; 
       }
+      width?: string; 
     }; 
     panel: { 
       colors: { 

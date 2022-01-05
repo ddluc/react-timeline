@@ -42,7 +42,8 @@ export const theme: Theme = {
     spacing: {
       top: '10px', 
       bottom: '15px'
-    }
+    },
+    width: '420px'
   }, 
   panel: { 
     colors: { 

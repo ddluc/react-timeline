@@ -14,7 +14,7 @@ const Card = styled.button<Props>`
   padding: 10px; 
   margin-top: ${ ({ theme }: ThemedProps ) => theme.card.spacing.top};
   margin-bottom: ${ ({ theme }: ThemedProps ) => theme.card.spacing.bottom };
-  width: 430px; 
+  width: ${ ({ theme }: ThemedProps ) => theme.card.width || '430px' };
   min-height: 120px; 
   display: flex; 
   cursor: pointer; 

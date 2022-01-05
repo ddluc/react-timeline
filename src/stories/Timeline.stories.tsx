@@ -58,8 +58,14 @@ Condensed.args = {
 // 3. With Detail Panel
 export const WithDetailPanel = Template.bind({}); 
 WithDetailPanel.args = { 
-  theme: TimelineTheme.default,
   showDetailPanel: true,
+  theme: { 
+    ...TimelineTheme.default, 
+    card: { 
+      ...TimelineTheme.default.card, 
+      width: '420px',
+    }
+  }
 }; 
 
 // 4. Dark (With Custom Icon)
@@ -96,7 +102,7 @@ WithCustomIcons.args = {
 // 6. As a skeleton
 export const Skeleton = Template.bind({})
 Skeleton.args = { 
-  skeleton: true
+  isLoading: true
 }; 
 
 // 7. With Date Ranges
