@@ -10,20 +10,18 @@ import { isSkeletonProps } from './types';
 import { 
   Timeline, 
   Props as TimelineProps, 
-  SkeletonProps as TimelineSkeletonProps
 } from './components/Timeline';
 
 export interface Props extends TimelineProps {
+  isLoading?:boolean; 
   theme?: Theme; 
 }
 
-export const ReactTimeline = (props: Props | TimelineSkeletonProps): JSX.Element => {
-
-  if (isSkeletonProps(props)) {
-    return <Timeline skeleton {...props} />
-  }
-
-  const { theme = DEFAULT_THEME } = props; 
+export const ReactTimeline = ({ 
+  theme = DEFAULT_THEME, 
+  isLoading,
+  ...props
+}: Props): JSX.Element => {
 
   React.useEffect((() => {
     logBuild(); 
@@ -32,7 +30,7 @@ export const ReactTimeline = (props: Props | TimelineSkeletonProps): JSX.Element
   return (
     <ThemeProvider theme={theme}>
       { theme.id === '__default' && <GlobalFonts /> }
-      <Timeline {...props} />
+      { isLoading ? <Timeline {...props} skeleton /> : <Timeline {...props} /> }
     </ThemeProvider>
   ); 
   

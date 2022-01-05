@@ -1,6 +1,7 @@
 import { Theme } from "styled-components";
-import { Props as TimelineProps, SkeletonProps as TimelineSkeletonProps } from './components/Timeline';
+import { Props as TimelineProps } from './components/Timeline';
 export interface Props extends TimelineProps {
+    isLoading?: boolean;
     theme?: Theme;
 }
-export declare const ReactTimeline: (props: Props | TimelineSkeletonProps) => JSX.Element;
+export declare const ReactTimeline: ({ theme, isLoading, ...props }: Props) => JSX.Element;

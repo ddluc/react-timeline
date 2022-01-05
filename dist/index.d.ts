@@ -1,5 +1,5 @@
 import * as Package from './lib';
-declare const _default: (props: Package.Props | import("./lib/components/Timeline").SkeletonProps) => JSX.Element;
+declare const _default: ({ theme, isLoading, ...props }: Package.Props) => JSX.Element;
 export default _default;
 export { Props } from './lib';
 export { ITimelineEvent } from './lib/types';
